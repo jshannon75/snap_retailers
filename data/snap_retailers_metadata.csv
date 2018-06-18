@@ -1,55 +1,55 @@
-Variable,Description
-store_name,Store name
-addr_num,Address/building number
-addr_st,Street name for the building
-addr_all,Full street address
-addr_add,"Additional address line (suite #, etc.)"
-city,City
-state,State
-zip5,Zip code
-country,Country
-store_type,Store type classification from USDA
-stype_num,Numeric code for store type (see separate metadata to the below)
-storeid,"Store ID code (created by Shannon, not USDA)"
-Y2008,Store present in 2008
-Y2009,Store present in 2009
-Y2010,Store present in 2010
-Y2011,Store present in 2011
-Y2012,Store present in 2012
-Y2013,Store present in 2013
-Y2014,Store present in 2014
-Y2015,Store present in 2015
-Y2016,Store present in 2016
-Y2017,Store present in 2017
-X,Longitude of retailer
-Y,Latitude of retailer
-method,"Method for locating retailer (USDA, ESRI geocoder, Google geocoder, or manual)"
-match,Precision of the match--code depends on the method
-dup,Includes retailers combined through fuzzy matching
-state_fp,State FIPS code
-county_fp,County FIPS code
-tract_fp,Tract FIPS code
-gisjn_tct,Character version of tract FIPS from NHGIS (https://www.nhgis.org)
-msa,Metropolitan Statistical Area (MSA) name
-msa_id,MSA FIPS code
-,
-,
-,
-store_type,stype_num
-Bakery Specialty,1
-Combination Grocery/Other,2
-Convenience Store,3
-Delivery Route,4
-Direct Marketing Farmer,5
-Farmers' Market,6
-Fruits/Veg Specialty,7
-Large Grocery Store,8
-Meat/Poultry Specialty,9
-Medium Grocery Store,10
-Military Commissary,11
-Non-profit Food Buying Co-op,12
-Seafood Specialty,13
-Small Grocery Store,14
-Super Store,15
-Supermarket,16
-Wholesaler,17
+Variable,Description,,
+store_name,Store name,,
+addr_num,Address/building number,,
+addr_st,Street name for the building,,
+addr_all,Full street address,,
+addr_add,"Additional address line (suite #, etc.)",,
+city,City,,
+state,State,,
+zip5,Zip code,,
+country,Country,,
+store_type,Store type classification from USDA,,
+stype_num,Numeric code for store type (see separate metadata to the below),,
+storeid,"Store ID code (created by Shannon, not USDA)",,
+Y2008,Store present in 2008,,
+Y2009,Store present in 2009,,
+Y2010,Store present in 2010,,
+Y2011,Store present in 2011,,
+Y2012,Store present in 2012,,
+Y2013,Store present in 2013,,
+Y2014,Store present in 2014,,
+Y2015,Store present in 2015,,
+Y2016,Store present in 2016,,
+Y2017,Store present in 2017,,
+X,Longitude of retailer,,
+Y,Latitude of retailer,,
+method,"Method for locating retailer (USDA, ESRI geocoder, Google geocoder, or manual)",,
+match,Precision of the match--code depends on the method,,
+dup,Includes retailers combined through fuzzy matching,,
+state_fp,State FIPS code,,
+county_fp,County FIPS code,,
+tract_fp,Tract FIPS code,,
+gisjn_tct,Character version of tract FIPS from NHGIS (https://www.nhgis.org),,
+msa,Metropolitan Statistical Area (MSA) name,,
+msa_id,MSA FIPS code,,
+,,,
+,,,
+,,,
+store_type,stype_num,store_group,stgrp_num
+Bakery Specialty,1,Specialty,5
+Combination Grocery/Other,2,Small retail,4
+Convenience Store,3,Small retail,4
+Delivery Route,4,Other store,3
+Direct Marketing Farmer,5,Local foods,2
+Farmers' Market,6,Local foods,2
+Fruits/Veg Specialty,7,Specialty,5
+Large Grocery Store,8,Grocer,1
+Meat/Poultry Specialty,9,Specialty,5
+Medium Grocery Store,10,Grocer,1
+Military Commissary,11,Other store,3
+Non-profit Food Buying Co-op,12,Local foods,2
+Seafood Specialty,13,Specialty,5
+Small Grocery Store,14,Grocer,1
+Super Store,15,Supermarket,6
+Supermarket,16,Supermarket,6
+Wholesaler,17,Supermarket,6
