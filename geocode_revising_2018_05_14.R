@@ -13,8 +13,7 @@ snap_geocode<-read_csv("data/snap_retailers_natl_noxy_2018_02_13.csv") %>%
 table(snap_geocode$Addr_type)
 
 snap_geocode_locality<-snap_geocode %>%
-  filter(Addr_type=="Locality") #A lot of St. Croix. 0's are left out of zip, but would zips be better?
-#Also several good addresses so could do by hand. Will leave be for now, as there's only 15.
+  filter(Addr_type=="Locality") #A lot of St. Croix. 0's are left out of zip. Will leave be for now, as there's only 15.
 
 snap_geocode_poi<-snap_geocode %>%
   filter(Addr_type=="POI") #These look mostly OK. List things like shopping malls, etc.
@@ -26,7 +25,7 @@ snap_geocode_postalloc<-snap_geocode %>%
   filter(Addr_type=="PostalLoc") #Run through Google? Modified Zip code but multiple good addresses.
 
 snap_geocode_staddext<-snap_geocode %>%
-  filter(Addr_type=="StreetAddressExt") #Technically out of range. These might take some time, as the addresses look off.
+  filter(Addr_type=="StreetAddressExt") #Technically out of range. 
 
 snap_geocode_stint<-snap_geocode %>%
   filter(Addr_type=="StreetInt") #Street intersections. These are fine.
@@ -36,9 +35,6 @@ snap_geocode_stname<-snap_geocode %>%
 
 snap_geocode_subadd<-snap_geocode %>%
   filter(Addr_type=="Subaddress") #With apts, etc. These are fine.
-
-##Priorities: Street Address Ext, StreetName. Might take a pass with these in Google over the next few days.
-
 
 plot(snap_geocode$X,snap_geocode$Y)
 

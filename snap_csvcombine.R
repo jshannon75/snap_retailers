@@ -15,8 +15,6 @@ allstoredata<-lapply(files.to.read, function(f) {
   }) %>% 
   bind_rows() 
 
-temp2009<-read_csv("Auth Stores 06-30-17.csv")
-
 #Filter for unique store names and street address and zip. Remove duplicates.
 allstoredata_filter<-allstoredata %>%
   select(store_name,addr_num,addr_st,city)
@@ -67,29 +65,7 @@ ggplot(allstoredata_table,aes(x=year,y=store_count)) +
   theme(axis.text.x=element_text(angle=45,vjust=0.5))
 
 
-############
-####OLD CODE
-############
-
-#Old read in
-
-# Read each file and write it to csv
-# lapply(files.to.read, function(f) {
-#   f1<-paste("data/",f,sep="")
-#   df<-read_excel(f1)[-1,1:10] 
-#   names(df)<-c("date","store_name","addr_num","addr_st","addr_add","city","st","zip5","zip4","store_type")
-#   df<-df %>%
-#     select(-date,-zip4) %>%
-#     mutate(date=substr(f,13,20))
-#   write.csv(df, gsub("xlsx", "csv", f), row.names=FALSE)
-# })
-
-#Read in csv files
-# csv.files.to.read = list.files(pattern="Auth Stores")
-# allstoredata<-lapply(csv.files.to.read, read_csv) %>% 
-#   bind_rows() 
-
-##Identify duplicate addresses only--this removes stores with only street names and where stores reopen after closing. Too aggressive. 
+##Identify duplicate addresses only--this removes stores with only street names and where stores reopen after closing. 
 #Create list of unique addresses
 storedata_addressonly<-allstoredata_xy %>%
   group_by(addr_num,addr_st,city) %>%

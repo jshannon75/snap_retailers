@@ -10,11 +10,11 @@ library(tidyverse)
 This short file combines identified duplicate records from fuzzy matching by name and address. Duplicates were identified through a fuzzy matching algorithm in Python, which generated a list of potential matches that were reviewed manually to create a list of duplicates.  First, we read in the list of duplicates and create a list of record pairs to be combined. There's two files, one matched based on similar names and the other based on similar addresses. There's some duplicate pairs in common between them. For later use, we combine these pairs to a single column.
 
 ```{r, message=FALSE}
-name_dup<-read_csv("data/zane_results/snap_matches_from_names1.csv") %>%
+name_dup<-read_csv("data/dupmatch_results/snap_matches_from_names1.csv") %>%
   filter(dup==1) %>%
   select(store1name,store2name_1)
 
-add_dup<-read_csv("data/zane_results/snap_mattches_from_addresses1.csv") %>%
+add_dup<-read_csv("data/dupmatch_results/snap_mattches_from_addresses1.csv") %>%
   filter(dup==1) %>%
   select(store1name,store2name_1)
 
