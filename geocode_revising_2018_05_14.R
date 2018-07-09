@@ -42,7 +42,7 @@ plot(snap_geocode$X,snap_geocode$Y)
 ## geocode data w/Google ####
 #Generally keeping rooftop, range interpolated, and geometric center
 
-register_google(key = "AIzaSyDatD5pGtn0aMaNezefrP82jtNkNJUUKe8", account_type = "premium", day_limit = 100000)
+register_google(key = "key goes here", account_type = "premium", day_limit = 100000)
 ggmap_credentials()
 
 
