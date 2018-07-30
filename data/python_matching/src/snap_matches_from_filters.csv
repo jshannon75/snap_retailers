@@ -1,0 +1,49 @@
+,store1,store2,address_distence,name_distance
+0,#1 american deli,1 stop food mart,33,14
+1,#1 american deli,1 stop food mart,33,14
+2,#1 store food and convenience,$1 dollar plus store,34,23
+3,#1 store food and convenience,$1 dollar plus store,34,23
+4,$1 dollar plus store,#1 store food and convenience,34,23
+5,$1 dollar plus store,#1 store food and convenience,34,23
+6,$1.25 mart or less,' a ' circle food mart,25,17
+7,$1.25 mart or less,' a ' circle food mart,25,17
+8,' a ' circle food mart,$1.25 mart or less,25,17
+9,' a ' circle food mart,$1.25 mart or less,25,17
+10,' a ' circle food mart,1 stop,26,20
+11,' a ' circle food mart,1 stop,26,20
+12,06 hundred-23 hundred,1 quick stop,24,18
+13,06 hundred-23 hundred,1 quick stop,24,18
+14,"1 dollar mart, inc",1 stop,37,15
+15,"1 dollar mart, inc",1 stop,37,15
+16,"1 dollar mart, inc",1 stop deli & grocery 1,32,18
+17,"1 dollar mart, inc",1 stop deli & grocery 1,32,18
+18,1 more stop inc,1 stop,26,9
+19,1 more stop inc,1 stop,26,9
+20,1 quick stop,"1,2,3 farm",30,10
+21,1 quick stop,"1,2,3 farm",30,10
+22,1 quick stop,1-stop food store,26,12
+23,1 quick stop,1-stop food store,26,12
+24,1 quick stop,06 hundred-23 hundred,24,18
+25,1 quick stop,06 hundred-23 hundred,24,18
+26,1 stop,"1 dollar mart, inc",37,15
+27,1 stop,"1 dollar mart, inc",37,15
+28,1 stop,1 stop deli & grocery 1,37,17
+29,1 stop,1 stop deli & grocery 1,37,17
+30,1 stop,' a ' circle food mart,26,20
+31,1 stop,' a ' circle food mart,26,20
+32,1 stop,1 more stop inc,26,9
+33,1 stop,1 more stop inc,26,9
+34,1 stop deli & grocery 1,"1 dollar mart, inc",32,18
+35,1 stop deli & grocery 1,"1 dollar mart, inc",32,18
+36,1 stop deli & grocery 1,1 stop,37,17
+37,1 stop deli & grocery 1,1 stop,37,17
+38,1 stop food mart,#1 american deli,33,14
+39,1 stop food mart,#1 american deli,33,14
+40,1 stop shop grocery,1 thomaston road llc,29,13
+41,1 stop shop grocery,1 thomaston road llc,29,13
+42,1 thomaston road llc,1 stop shop grocery,29,13
+43,1 thomaston road llc,1 stop shop grocery,29,13
+44,"1,2,3 farm",1 quick stop,30,10
+45,"1,2,3 farm",1 quick stop,30,10
+46,1-stop food store,1 quick stop,26,12
+47,1-stop food store,1 quick stop,26,12

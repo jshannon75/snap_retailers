@@ -1,0 +1,263 @@
+,Unnamed: 0,Unnamed: 0.1,Unnamed: 0.1.1,store_name,addr_num,addr_st,addr_add,city,st,zip5,store_type,storeid,Y2008,Y2009,Y2010,Y2011,Y2012,Y2013,Y2014,Y2015,Y2016,Y2017,long,lat,address
+0,0,268732,268732,"""a"" food store",11,W Burgess Rd,,Pensacola,FL,32503,Convenience Store,st_268270,0,0,0,1,1,1,1,1,1,1,-107.32493,39.54301,w burgess rd pensacola fl pensacola
+252,0,268732,268732,"""a"" food store",11,W Burgess Rd,,Pensacola,FL,32503,Convenience Store,st_268271,0,0,0,1,1,1,1,1,1,1,-107.32493,39.54301,w burgess rd pensacola fl pensacola
+1,1,139231,139231,"""u"" save food store",4039,NW 19th St,,Lauderhill,FL,33313,Combination Grocery/Other,st_139220,1,0,0,0,0,0,0,0,0,0,-84.53436573,42.74731757,nw 19th st lauderhill fl lauderhill
+253,1,139231,139231,"""u"" save food store",4039,NW 19th St,,Lauderhill,FL,33313,Combination Grocery/Other,st_139221,1,0,0,0,0,0,0,0,0,0,-84.53436573,42.74731757,nw 19th st lauderhill fl lauderhill
+2,2,166615,166615,"""z"" convenience store",19001,NE 23rd St,,Harrah,OK,73045,Convenience Store,st_166601,1,0,0,0,0,0,0,0,0,0,-121.16425,38.67304,ne 23rd st harrah ok harrah
+254,2,166615,166615,"""z"" convenience store",19001,NE 23rd St,,Harrah,OK,73045,Convenience Store,st_166602,1,0,0,0,0,0,0,0,0,0,-121.16425,38.67304,ne 23rd st harrah ok harrah
+3,3,44258,44258,# 1 baltimore grocery & deli corp,3248,E Baltimore St,,Baltimore,MD,21224,Small Grocery Store,st_044256,1,1,1,1,0,0,0,0,0,0,-85.78871914,35.70198366,e baltimore st baltimore md baltimore
+255,3,44258,44258,# 1 baltimore grocery & deli corp,3248,E Baltimore St,,Baltimore,MD,21224,Small Grocery Store,st_044257,1,1,1,1,0,0,0,0,0,0,-85.78871914,35.70198366,e baltimore st baltimore md baltimore
+4,4,6720,6720,# 1 food 4 mart,729,NW 185th Ave,,Beaverton,OR,97006,Convenience Store,st_006721,1,1,1,1,1,1,1,1,1,1,-70.81004987,42.06937082,nw 185th ave beaverton or beaverton
+256,4,6720,6720,# 1 food 4 mart,729,NW 185th Ave,,Beaverton,OR,97006,Convenience Store,st_006723,1,1,1,1,1,1,1,1,1,1,-70.81004987,42.06937082,nw 185th ave beaverton or beaverton
+257,5,176881,176881,# 1 food store,15632,Westpark Dr,,Houston,TX,77082,Convenience Store,st_176831,0,1,1,0,0,0,0,0,0,0,-76.24166,36.29948,westpark dr houston tx houston
+6,6,64147,64147,# 1 food store,5356,Wedgmont Cir N,,Fort Worth,TX,76133,Convenience Store,st_064138,1,1,1,0,0,0,0,0,0,0,-117.6507667,34.06733873,wedgmont cir n fort worth tx fort worth
+5,5,176881,176881,# 1 food store,15632,Westpark Dr,,Houston,TX,77082,Convenience Store,st_176831,0,1,1,0,0,0,0,0,0,0,-76.24166,36.29948,westpark dr houston tx houston
+7,7,18921,18921,# 1 spirits liquor llc,2841,Cochrane St,,Detroit,MI,48216,Convenience Store,st_018921,1,1,1,1,1,1,0,0,0,0,-84.11585306,36.83256533,cochrane st detroit mi detroit
+8,8,9569,9569,# 1 stop,430,Industrial Dr W,,Sulphur Springs,TX,75482,Convenience Store,st_009570,1,1,1,1,1,1,1,0,0,0,-86.0521036,43.4836454,industrial dr w sulphur springs tx sulphur springs
+9,9,210145,210145,# 1 store,5243,Ford-Wellpinit Rd,,Ford,WA,99013,Convenience Store,st_209968,0,0,1,1,1,1,1,1,1,1,-108.8263,35.50645,ford-wellpinit rd ford wa ford
+10,10,16405,16405,#1  privoz butcher shop inc,309,Brighton Beach Ave,,Brooklyn,NY,11235,Meat/Poultry Specialty,st_016405,1,0,0,0,0,0,0,0,0,0,-86.90341596,33.49428848,brighton beach ave brooklyn ny brooklyn
+11,11,10849,10849,#1 american deli,41,Lincoln Ave,,New Rochelle,NY,10801,Small Grocery Store,st_010850,1,1,1,1,1,1,1,0,0,0,-74.04749655,40.72273845,lincoln ave new rochelle ny new rochelle
+12,12,10977,10977,#1 citgo mart,11555,Cullen Blvd,,Houston,TX,77047,Convenience Store,st_010978,1,1,1,1,1,1,1,0,0,0,-82.45901208,28.08815447,cullen blvd houston tx houston
+13,13,115717,115717,#1 discount grocery & po-boy,629,Derbigny St,,Gretna,LA,70053,Small Grocery Store,st_115707,1,1,1,1,1,1,1,1,1,0,-119.0210809,36.06528651,derbigny st gretna la gretna
+14,14,199729,199729,#1 dollar store,5755,W Flagler St,Ste 106,Miami,FL,33144,Fruits/Veg Specialty,st_199595,0,0,1,1,1,1,0,0,0,0,-84.91619,32.46869,w flagler st miami fl miami
+15,15,197651,197651,#1 express deli inc,759,Clinton Ave N,,Rochester,NY,14605,Small Grocery Store,st_197524,0,1,1,1,1,1,1,1,1,1,-77.50482,42.78957,clinton ave n rochester ny rochester
+16,16,68380,68380,#1 express food mart,7419,Irvington Blvd,,Houston,TX,77022,Convenience Store,st_068371,1,1,1,1,1,1,1,0,0,0,-94.64935068,39.09900508,irvington blvd houston tx houston
+17,17,71270,71270,#1 fish market,2239,State St,,Hamden,CT,6517,Seafood Specialty,st_071261,1,1,1,1,1,1,1,1,1,1,-92.10205032,30.44962021,state st hamden ct hamden
+18,18,9114,9114,#1 food mart,11903,Beechnut St,,Houston,TX,77072,Convenience Store,st_009115,1,1,1,1,1,1,0,0,0,0,-82.67080243,39.49678443,beechnut st houston tx houston
+20,20,154665,154665,#1 grocery & deli,485,S Broadway,,Yonkers,NY,10705,Small Grocery Store,st_154652,1,1,0,0,0,0,0,0,0,0,-95.96938864,28.96220712,s broadway yonkers ny yonkers
+19,19,174312,174312,#1 grocery & deli,483,S Broadway,,Yonkers,NY,10705,Convenience Store,st_174275,0,1,1,1,1,1,1,1,1,1,-93.98988,31.11284,s broadway yonkers ny yonkers
+21,21,232377,232377,#1 liberty mart,8625,Liberty Rd,,Randallstown,MD,21133,Medium Grocery Store,st_232113,0,0,1,1,0,0,0,0,0,0,-78.75715,39.65406,liberty rd randallstown md randallstown
+22,22,231929,231929,#1 market,3003,Overton Crossing St,,Memphis,TN,38127,Convenience Store,st_231667,0,0,1,1,0,0,0,0,0,0,-81.28824,35.70077,overton crossing st memphis tn memphis
+23,23,101802,101802,#1 mini market,36,Westchester Sq,,Bronx,NY,10461,Combination Grocery/Other,st_101792,1,1,1,1,1,1,1,1,1,1,-83.1970779,42.372496,westchester sq bronx ny bronx
+24,24,208387,208387,#1 neighborhood deli & grocery inc 353,353,Onderdonk Ave,,Ridgewood,NY,11385,Convenience Store,st_208220,0,0,1,1,1,1,1,0,0,0,-73.67846,42.70707,onderdonk ave ridgewood ny ridgewood
+25,25,231819,231819,#1 price busters,5870,Crenshaw Blvd,Ste 502,Los Angeles,CA,90043,Convenience Store,st_231557,0,0,1,1,1,1,1,0,0,0,-82.76101,36.18563,crenshaw blvd los angeles ca los angeles
+26,26,9291,9291,#1 stop food mart,1800,Valley View Ln Ste 158,,Irving,TX,75061,Convenience Store,st_009292,1,1,0,0,0,0,0,0,0,0,-118.2914831,34.02717962,valley view ln ste 158 irving tx irving
+27,27,36702,36702,#1 stop market,7407,McMinnville Hwy,,Manchester,TN,37355,Convenience Store,st_036701,1,1,1,1,1,1,1,1,1,0,-87.6295125,41.49520951,mcminnville hwy manchester tn manchester
+28,28,4856,4856,#1 store food and convenience,312,S Watson Rd,,Arlington,TX,76010,Convenience Store,st_004857,1,1,1,1,1,1,1,0,0,0,-94.53917095,39.06215648,s watson rd arlington tx arlington
+29,29,14418,14418,#1 super palestine,10326,S Harlem Ave,,Palos Hills,IL,60465,Small Grocery Store,st_014419,1,1,1,1,1,1,1,1,1,1,-85.62987145,42.31421838,s harlem ave palos hills il palos hills
+30,30,59329,59329,#1 supermarket,333,Union Ave,Ste 101,Bakersfield,CA,93307,Large Grocery Store,st_059322,1,1,1,1,0,0,0,0,0,0,-90.09849258,35.674866,union ave bakersfield ca bakersfield
+31,31,228315,228315,#2 5 star candy & grocery inc,1275,Saint Nicholas Ave,,New York,NY,10033,Medium Grocery Store,st_228065,0,0,1,1,1,1,1,0,0,0,-119.01937,35.31758,saint nicholas ave new york ny new york
+32,32,228367,228367,#3 5 star candy & grocery inc,265,E 167th St,,Bronx,NY,10456,Medium Grocery Store,st_228117,0,0,1,1,1,1,1,0,0,0,-97.96876,41.36414,e 167th st bronx ny bronx
+33,33,58505,58505,$ 1 depot inc.,356,W 125th St,,New York,NY,10027,Small Grocery Store,st_058498,1,1,1,1,1,0,0,0,0,0,-91.66343747,29.90415518,w 125th st new york ny new york
+34,34,34428,34428,$1 & more,22016,John R Rd,,Hazel Park,MI,48030,Convenience Store,st_034428,1,1,1,1,1,1,1,1,1,0,-83.31036253,42.31173446,john r rd hazel park mi hazel park
+35,35,176864,176864,$1 & up stores,2400,Coffee Rd,Ste K,Modesto,CA,95355,Convenience Store,st_176814,0,1,1,1,1,0,0,0,0,0,-84.39617,35.6821,coffee rd modesto ca modesto
+36,36,94862,94862,$1 + discount market,10401,Long Beach Blvd,,Lynwood,CA,90262,Small Grocery Store,st_094852,1,1,1,0,0,0,0,0,0,0,-84.95622238,34.76866947,long beach blvd lynwood ca lynwood
+37,37,418503,418503,$1 days,4130,SW Lombard Ave,Ste 100,Beaverton,OR,97005,Convenience Store,st_416542,0,0,0,0,0,0,0,0,0,1,-83.63511,43.05104,sw lombard ave beaverton or beaverton
+38,38,10791,10791,$1 dollar plus store,1764,W Highland Ave,,San Bernardino,CA,92411,Convenience Store,st_010792,1,1,1,1,1,1,1,0,0,0,-94.5216312,39.05437951,w highland ave san bernardino ca san bernardino
+39,39,42751,42751,$1 dollar plus store,24459,Sunnymead Blvd,,Moreno Valley,CA,92553,Convenience Store,st_042750,1,1,1,1,1,1,0,0,0,0,-82.59540384,33.2352272,sunnymead blvd moreno valley ca moreno valley
+40,40,48048,48048,$1 king,146,W Base Line St,,San Bernardino,CA,92410,Convenience Store,st_048045,1,1,1,1,1,1,0,0,0,0,-71.45295641,42.9818755,w base line st san bernardino ca san bernardino
+41,41,59308,59308,$1 plus store,1017,W Gardena Blvd,,Gardena,CA,90247,Convenience Store,st_059301,1,1,1,1,1,1,1,1,1,1,-95.401242,29.93173647,w gardena blvd gardena ca gardena
+42,42,37159,37159,$1 smart outlet,126,W 40th St,,San Bernardino,CA,92407,Convenience Store,st_037158,1,1,1,1,1,1,1,1,1,1,-76.00870366,41.20193334,w 40th st san bernardino ca san bernardino
+43,43,29836,29836,$1+ discount mart,19401,N Cave Creek Rd,Ste 5,Phoenix,AZ,85024,Medium Grocery Store,st_029836,1,1,1,0,0,0,0,0,0,0,-97.4943988,35.35650561,n cave creek rd phoenix az phoenix
+44,44,275691,275691,$1.00 + supermarket,8951,Richmond Ave,,Houston,TX,77063,Convenience Store,st_275190,0,0,0,0,1,1,0,0,0,0,-73.9147,42.76949,richmond ave houston tx houston
+45,45,203470,203470,$1.00 plus grocery,5530,Buford Hwy,Ste 302,Norcross,GA,30071,Convenience Store,st_203324,0,0,1,0,0,0,0,0,0,0,-112.00703,40.63859,buford hwy norcross ga norcross
+46,46,7112,7112,$1.00 store,3846,Linden Ave,,Dayton,OH,45432,Convenience Store,st_007113,1,1,1,1,1,1,1,1,1,1,-76.58848331,39.22375147,linden ave dayton oh dayton
+47,47,64970,64970,$1.25 mart or less,505,W Clinton Ave,,Fresno,CA,93705,Convenience Store,st_064961,1,1,1,1,1,1,1,0,0,0,-75.14295407,39.99712163,w clinton ave fresno ca fresno
+48,48,46346,46346,$mart,102,E Main,,Lewistown,MO,63452,Small Grocery Store,st_046344,1,1,0,0,0,0,0,0,0,0,-77.12483703,39.06252599,e main lewistown mo lewistown
+49,49,226349,226349,$mart mart llc,5624,Hall Rd,,Columbus,OH,43228,Convenience Store,st_226106,0,0,1,0,0,0,0,0,0,0,-76.9061,38.85556,hall rd columbus oh columbus
+50,50,35989,35989,$ollar zone,12811,Victory Blvd,,North Hollywood,CA,91606,Convenience Store,st_035988,1,1,1,0,0,0,0,0,0,0,-82.12280415,41.41865341,victory blvd north hollywood ca north hollywood
+51,51,215137,215137,$peedway fuel mart,2119,N Parkway E,,Jackson,TN,38301,Convenience Store,st_214947,0,0,1,1,0,0,0,0,0,0,-88.09934,42.04605,n parkway e jackson tn jackson
+52,52,404075,404075,' a ' circle food mart,15446,14th St,,Dade City,FL,33523,Convenience Store,st_402274,0,0,0,0,0,0,0,0,0,1,-75.1599,39.95032,14th st dade city fl dade city
+53,53,421661,421661,'oko'a farms,0,Omaopio Rd,,Kula,HI,96790,Direct Marketing Farmer,st_419677,0,0,0,0,0,0,0,0,0,1,-87.03075,33.46718,omaopio rd kula hi kula
+54,54,286618,286618,(102) 4 brothers food store 102,287,Holly Springs Rd,,Mount Airy,NC,27030,Convenience Store,st_286011,0,0,0,0,1,1,1,1,1,1,-74.27173,40.52054,holly springs rd mount airy nc mount airy
+55,55,283588,283588,(104) 4 brothers food store 104,Rt 1,Hwy 52 Perch Road,,Pinnacle,NC,27043,Convenience Store,st_283020,0,0,0,0,1,1,1,1,1,1,-87.01267,32.41221,hwy 52 perch road pinnacle nc pinnacle
+56,56,277771,277771,(203) 4 brothers food store 203,715,W 5th St,,Winston Salem,NC,27101,Convenience Store,st_277255,0,0,0,0,1,1,1,1,1,1,-72.67488,40.93283,w 5th st winston salem nc winston salem
+57,57,285406,285406,(205) 4 brothers food store 205,5217,Robinhood Rd,,Winston Salem,NC,27106,Convenience Store,st_284810,0,0,0,0,1,1,1,1,1,1,-86.84329,33.4806,robinhood rd winston salem nc winston salem
+58,58,283771,283771,(206) 4 brothers food store 206,7895,Broad St,,Rural Hall,NC,27045,Convenience Store,st_283202,0,0,0,0,1,1,1,1,1,1,-79.03981,43.13064,broad st rural hall nc rural hall
+59,59,283403,283403,(209) 4 brothers food store 209,2602,New Walkertown Rd,,Winston Salem,NC,27101,Convenience Store,st_282837,0,0,0,0,1,1,1,1,1,1,-122.06185,47.54567,new walkertown rd winston salem nc winston salem
+60,60,285413,285413,(210) 4 brothers food store 210,902,S Stratford Rd,,Winston Salem,NC,27103,Convenience Store,st_284817,0,0,0,0,1,1,1,1,1,1,-87.82356,37.48055,s stratford rd winston salem nc winston salem
+61,61,283782,283782,(211) 4 brothers food stores 211,3939,Country Club Rd,,Winston Salem,NC,27104,Convenience Store,st_283213,0,0,0,0,1,1,1,1,1,1,-122.17758,47.70885,country club rd winston salem nc winston salem
+62,62,283796,283796,(212) 4 brothers food store 212,2410,Lewisville Clemmons Rd,,Clemmons,NC,27012,Convenience Store,st_283227,0,0,0,0,1,1,1,1,1,1,-120.41935,34.9369,lewisville clemmons rd clemmons nc clemmons
+63,249,283796,283796,(212) 4 brothers food store 212,2410,Lewisville Clemmons Rd,,Clemmons,NC,27012,Convenience Store,st_283227,0,0,0,0,1,1,1,1,1,1,-120.41935,34.9369,lewisville clemmons rd clemmons nc clemmons
+65,250,283654,283654,(214) 4 brothers food store 214,4575,Yadkinville Rd,,Pfafftown,NC,27040,Convenience Store,st_283086,0,0,0,0,1,1,1,1,1,1,-88.56197,39.13938,yadkinville rd pfafftown nc pfafftown
+64,63,283654,283654,(214) 4 brothers food store 214,4575,Yadkinville Rd,,Pfafftown,NC,27040,Convenience Store,st_283086,0,0,0,0,1,1,1,1,1,1,-88.56197,39.13938,yadkinville rd pfafftown nc pfafftown
+67,64,285723,285723,(215) 4 brothers food stores 215,6351,Shallowford Rd,,Lewisville,NC,27023,Convenience Store,st_285123,0,0,0,0,1,1,1,1,1,1,-72.79969,44.78842,shallowford rd lewisville nc lewisville
+66,251,285723,285723,(215) 4 brothers food stores 215,6351,Shallowford Rd,,Lewisville,NC,27023,Convenience Store,st_285123,0,0,0,0,1,1,1,1,1,1,-72.79969,44.78842,shallowford rd lewisville nc lewisville
+68,65,283536,283536,(217) 4 brothers food store 217,5115,Main St,,Walkertown,NC,27051,Convenience Store,st_282968,0,0,0,0,1,1,1,1,1,1,-89.48649,43.10336,main st walkertown nc walkertown
+69,66,285740,285740,(300) 4 brothers food store 300,1736,Highway 67,,Jonesville,NC,28642,Convenience Store,st_285140,0,0,0,0,1,1,1,1,1,1,-97.05147,36.13551,highway 67 jonesville nc jonesville
+70,67,285745,285745,(302) 4 brothers food store 302,800,S State St,,Yadkinville,NC,27055,Convenience Store,st_285145,0,0,0,0,1,1,1,1,1,1,-88.23847,40.1126,s state st yadkinville nc yadkinville
+71,68,288049,288049,(303) 4 brothers food store 303,1688,Highway 64 West,,Mocksville,NC,27028,Convenience Store,st_287432,0,0,0,0,1,1,1,1,1,1,-88.26517,42.06284,highway 64 west mocksville nc mocksville
+72,69,288060,288060,(306) 4 brothers food store 306,605,N Main St,,Troutman,NC,28166,Convenience Store,st_287443,0,0,0,0,1,1,1,1,1,1,-121.41776,38.4292,n main st troutman nc troutman
+73,70,288100,288100,(308) 4 brothers food store 308,656,W Main Ave,,Taylorsville,NC,28681,Convenience Store,st_287483,0,0,0,0,1,1,1,1,1,1,-81.64964,31.81455,w main ave taylorsville nc taylorsville
+74,71,287943,287943,(310) 4 brothers food store 310,117,NC Highway 801 N,,Advance,NC,27006,Convenience Store,st_287326,0,0,0,0,1,1,1,1,1,1,-117.20821,34.47141,nc highway 801 n advance nc advance
+75,72,299079,299079,(400) 4 brothers food store 400,1611,W D St,,North Wilkesboro,NC,28659,Convenience Store,st_298396,0,0,0,0,0,1,1,1,1,1,-82.95243,42.59699,w d st north wilkesboro nc north wilkesboro
+76,73,287938,287938,(401) 4 brothers food store 401,1301,Westwood Lane,,Wilksboro,NC,28697,Convenience Store,st_287321,0,0,0,0,1,1,1,1,1,1,-122.35517,47.50746,westwood lane wilksboro nc wilksboro
+77,74,286599,286599,(500) 4 brothers food store 500,2694,Highway 21 South,,Sparta,NC,28675,Convenience Store,st_285993,0,0,0,0,1,1,1,1,1,1,-97.72579,30.37607,highway 21 south sparta nc sparta
+78,75,252011,252011,(dryden) marathon,2501,Dryden Rd,,Moraine,OH,45439,Convenience Store,st_251646,0,0,0,1,1,1,1,1,1,1,-122.22454,37.46552,dryden rd moraine oh moraine
+79,76,149736,149736,(fm) boston hill farm llc,1370,Turnpike St,,North Andover,MA,1845,Farmers' Market,st_149723,1,0,0,0,0,0,0,0,0,0,-119.2630941,34.27554492,turnpike st north andover ma north andover
+80,77,144055,144055,(fm) greater worcester farmers mk,50,Canton St,,Worcester,MA,1610,Farmers' Market,st_144042,1,1,1,1,1,1,0,0,0,0,-117.6675204,34.01956795,canton st worcester ma worcester
+81,78,144057,144057,(fm) holyoke farmers market,,High St,,Holyoke,MA,1040,Farmers' Market,st_144044,1,1,1,1,1,1,1,1,1,1,-117.8813025,33.9106705,high st holyoke ma holyoke
+82,79,154346,154346,(fm) riverdale farm & garden,CORNER,ESSEX ST & PEMBERTON WAY,,LAWRENCE,MA,1841,Farmers' Market,st_154333,1,0,0,0,0,0,0,0,0,0,-81.10348791,35.32312083,essex st & pemberton way lawrence ma lawrence
+83,80,154347,154347,(fm) the stand at brox farm,CORNER,PEMBERTON WAY & ESSEX ST,,LAWRENCE,MA,1841,Farmers' Market,st_154334,1,0,0,0,0,0,0,0,0,0,-80.06103328,26.73433917,pemberton way & essex st lawrence ma lawrence
+84,81,301587,301587,(m) union store,7402,Greenville Ave,Ste 308,Dallas,TX,75231,Combination Grocery/Other,st_300892,0,0,0,0,0,1,1,1,1,0,-111.89609,40.85198,greenville ave dallas tx dallas
+85,82,141266,141266,(rbs) rafter bs,110,E MAIN ST,,LONG CREEK,OR,97856,Small Grocery Store,st_141253,1,0,0,0,0,0,0,0,0,0,-71.30716367,41.49866951,e main st long creek or long creek
+86,83,318502,318502,.99 & appliance center,5619,Hillsborough St.,,Raleigh,NC,27606,Convenience Store,st_317637,0,0,0,0,0,1,1,1,1,1,-94.47087,39.05963,hillsborough st. raleigh nc raleigh
+87,84,202350,202350,.99 & market,309,E Market St,,Long Beach,CA,90805,Convenience Store,st_202205,0,0,1,0,0,0,0,0,0,0,-82.5046,28.12794,e market st long beach ca long beach
+88,85,233089,233089,.99 + bargain corner,1976,N E St,Ste A,San Bernardino,CA,92405,Convenience Store,st_232823,0,0,1,1,1,1,1,1,1,1,-81.98849,41.45322,n e st san bernardino ca san bernardino
+89,86,332144,332144,0 star express deli grocery corp,3010,Glenwood Rd,,Brooklyn,NY,11210,Combination Grocery/Other,st_331142,0,0,0,0,0,0,1,1,1,1,-95.49816,29.95274,glenwood rd brooklyn ny brooklyn
+90,87,37288,37288,00 liquor mart,34460,Fremont Blvd,Ste G,Fremont,CA,94555,Convenience Store,st_037287,1,1,1,0,0,0,0,0,0,0,-89.99974307,38.59297249,fremont blvd fremont ca fremont
+91,88,225325,225325,00 liquors inc. none,1800,Whipple Rd,,Union City,CA,94587,Convenience Store,st_225089,0,0,1,1,1,1,1,1,1,1,-97.17471,27.92344,whipple rd union city ca union city
+92,89,259241,259241,007 grocery,831,Magnolia Blvd,,Magnolia,TX,77355,Convenience Store,st_258839,0,0,0,1,1,1,1,0,0,0,-81.68018,30.39267,magnolia blvd magnolia tx magnolia
+93,90,196317,196317,01 food mart,10501,S Wentworth Ave,,Chicago,IL,60628,Convenience Store,st_196194,0,1,1,1,1,1,0,0,0,0,-95.71893,29.79038,s wentworth ave chicago il chicago
+94,91,22033,22033,06 hundred-23 hundred,1804,Fort St,,Barling,AR,72923,Convenience Store,st_022033,1,1,1,1,1,0,0,0,0,0,-80.05831472,26.64083686,fort st barling ar barling
+95,92,340963,340963,0ne stop shop,580,Toms River Rd,,Jackson,NJ,8527,Medium Grocery Store,st_339872,0,0,0,0,0,0,1,1,1,1,-90.99011,30.09661,toms river rd jackson nj jackson
+96,93,217362,217362,"1 & up only store, inc",11151,Avalon Blvd,Ste 105,Los Angeles,CA,90061,Convenience Store,st_217162,0,0,1,1,1,1,0,0,0,0,-97.5499,35.56561,avalon blvd los angeles ca los angeles
+97,94,29278,29278,1 2 3 market corporation,4200,New York Ave,,Union City,NJ,7087,Small Grocery Store,st_029278,1,1,1,1,1,0,0,0,0,0,-84.43199585,33.67157793,new york ave union city nj union city
+98,95,358278,358278,1 2 3 mini mart inc,9101,Cottage Grove Ave,,Chicago,IL,60619,Small Grocery Store,st_356994,0,0,0,0,0,0,0,1,1,0,-82.58695,27.52134,cottage grove ave chicago il chicago
+99,96,292034,292034,1 2 3 store,430,Lewers St,Ste 100,Honolulu,HI,96815,Convenience Store,st_291394,0,0,0,0,1,1,1,1,1,0,-114.96712,36.039,lewers st honolulu hi honolulu
+100,97,37836,37836,1 am market,1931,NE Stephens St,,Roseburg,OR,97470,Convenience Store,st_037835,1,1,1,1,1,1,1,1,1,1,-80.56018853,39.28287398,ne stephens st roseburg or roseburg
+101,98,355395,355395,1 and up store,11151,Avalon Blvd,Ste 105,Los Angeles,CA,90061,Small Grocery Store,st_354139,0,0,0,0,0,0,0,1,0,0,-74.25808,40.66245,avalon blvd los angeles ca los angeles
+102,99,348189,348189,1 apple grocey 2,502,East Baker Street,,Plant City,FL,33563,Small Grocery Store,st_347027,0,0,0,0,0,0,1,1,0,0,-88.33996,38.0997,east baker street plant city fl plant city
+103,100,280657,280657,1 apple llc,8614,N Nebraska Ave,,Tampa,FL,33604,Combination Grocery/Other,st_280117,0,0,0,0,1,1,1,0,0,0,-117.34629,34.52839,n nebraska ave tampa fl tampa
+104,101,126267,126267,1 best buy quick stop,1309,5th St NE,Stand Number 54,Washington,DC,20002,Convenience Store,st_126257,1,1,1,1,0,0,0,0,0,0,-85.38130384,31.22764848,5th st ne washington dc washington
+105,102,317298,317298,1 best price 1,3420,Grand Blvd,,Holiday,FL,34690,Convenience Store,st_316454,0,0,0,0,0,1,1,1,1,1,-87.33547,41.43495,grand blvd holiday fl holiday
+106,103,405092,405092,1 bi farm,1120,Maunakea St,Ste 103,Honolulu,HI,96817,Fruits/Veg Specialty,st_403270,0,0,0,0,0,0,0,0,0,1,-87.79996,41.7553,maunakea st honolulu hi honolulu
+107,104,411143,411143,1 bridle market,1,Bridle Rd,,Billerica,MA,1821,Convenience Store,st_409250,0,0,0,0,0,0,0,0,0,1,-98.46758,29.55285,bridle rd billerica ma billerica
+108,105,417111,417111,1 deli,6901,S Normal Blvd,,Chicago,IL,60621,Convenience Store,st_415165,0,0,0,0,0,0,0,0,0,1,-115.15515,36.15226,s normal blvd chicago il chicago
+109,106,329167,329167,1 dollar  discount,2739,Diamond St,,Rosamond,CA,93560,Convenience Store,st_328193,0,0,0,0,0,0,1,0,0,0,-81.33966,28.52419,diamond st rosamond ca rosamond
+110,107,265310,265310,1 dollar bargain store,3787,N Michigan Ave,,Saginaw,MI,48604,Convenience Store,st_264866,0,0,0,1,1,1,1,1,1,0,-119.78082,39.49299,n michigan ave saginaw mi saginaw
+111,108,111753,111753,"1 dollar mart, inc",1931,E 7th St,,Long Beach,CA,90813,Convenience Store,st_111743,1,1,1,1,1,1,1,1,1,1,-73.90988058,40.83420758,e 7th st long beach ca long beach
+112,109,99949,99949,"1 dollar mart, inc.",754,Pine Ave,,Long Beach,CA,90813,Convenience Store,st_099939,1,1,1,1,0,0,0,0,0,0,-84.27602059,33.77500752,pine ave long beach ca long beach
+113,110,408369,408369,1 dollar plus shop inc,8500,Dyer Street,Siute 21,El Paso,TX,79904,Convenience Store,st_406503,0,0,0,0,0,0,0,0,0,1,-90.02481,32.35476,dyer street el paso tx el paso
+114,111,311870,311870,1 dollar store,1750,Sunshadow Dr,Ste 134,Casselberry,FL,32707,Convenience Store,st_311090,0,0,0,0,0,1,0,0,0,0,-83.3882,42.27412,sunshadow dr casselberry fl casselberry
+115,112,247565,247565,1 dollar store and more,6877,Dorchester Road,,North Charleston,SC,29418,Convenience Store,st_247226,0,0,0,1,1,1,1,1,0,0,-84.60062,42.7411,dorchester road north charleston sc north charleston
+116,113,299830,299830,1 dollar warehouse,6001,S Vermont Ave,Ste 1,Los Angeles,CA,90044,Convenience Store,st_299142,0,0,0,0,0,1,1,0,0,0,-81.69496,41.49777,s vermont ave los angeles ca los angeles
+117,114,397094,397094,1 downtown south food corp/bravo supermarket,4801,N Dixie Hwy,,Pompano Beach,FL,33064,Supermarket,st_395366,0,0,0,0,0,0,0,0,1,1,-115.20531,36.20985,n dixie hwy pompano beach fl pompano beach
+118,115,334510,334510,1 eleven no,5523,Harford Rd,,Baltimore,MD,21214,Convenience Store,st_333487,0,0,0,0,0,0,1,1,1,0,-89.70046,45.89064,harford rd baltimore md baltimore
+119,116,205378,205378,1 fam grocery inc,173,Woodworth Ave,,Yonkers,NY,10701,Convenience Store,st_205226,0,0,1,1,1,0,1,1,1,1,-68.74908,44.83537,woodworth ave yonkers ny yonkers
+120,117,213283,213283,1 first stop deli inc,8917,5th Ave,,Brooklyn,NY,11209,Convenience Store,st_213099,0,0,1,1,1,1,1,1,0,0,-86.86993,34.17026,5th ave brooklyn ny brooklyn
+121,118,301666,301666,1 fish 2 fish crabs & seafood,1019,Eastern Shore Dr,,Salisbury,MD,21804,Seafood Specialty,st_300971,0,0,0,0,0,1,1,1,1,1,-84.04352,33.80681,eastern shore dr salisbury md salisbury
+122,119,403997,403997,1 flatbush express deli inc,2191,Clarendon Rd,,Brooklyn,NY,11226,Convenience Store,st_402196,0,0,0,0,0,0,0,0,0,1,-94.63215,33.00613,clarendon rd brooklyn ny brooklyn
+123,120,382178,382178,1 food store,755,W Hwy 89a,,Clarkdale,AZ,86324,Convenience Store,st_380620,0,0,0,0,0,0,0,0,1,1,-84.02099,34.92452,w hwy 89a clarkdale az clarkdale
+124,121,417328,417328,1 gourmet deli 65,6542,Woodside Ave,,Woodside,NY,11377,Convenience Store,st_415376,0,0,0,0,0,0,0,0,0,1,-71.13089,42.35058,woodside ave woodside ny woodside
+125,122,368703,368703,1 guadalupe victoria inc,1484,St Nicholas Ave,,New York,NY,10033,Small Grocery Store,st_367302,0,0,0,0,0,0,0,1,1,1,-82.71572,28.25023,st nicholas ave new york ny new york
+126,123,304017,304017,1 jackpot mini mart inc,535,W 111th St,,Chicago,IL,60628,Small Grocery Store,st_303307,0,0,0,0,0,1,1,1,1,0,-118.11221,33.96307,w 111th st chicago il chicago
+127,124,277089,277089,1 junior inc,203,Thomas S Boyland St,,Brooklyn,NY,11233,Small Grocery Store,st_276580,0,0,0,0,1,1,1,1,1,0,-98.41762,29.6003,thomas s boyland st brooklyn ny brooklyn
+128,125,243905,243905,1 la casa de la carne inc,4410,48th Ave,,Woodside,NY,11377,Meat/Poultry Specialty,st_243587,0,0,0,1,1,1,0,0,0,0,-72.66189,41.70699,48th ave woodside ny woodside
+129,126,143840,143840,"1 marco aurelio market, inc",1,New Main St,,Haverstraw,NY,10927,Small Grocery Store,st_143827,1,1,0,0,0,0,0,0,0,0,-78.84338795,42.8237185,new main st haverstraw ny haverstraw
+130,127,218687,218687,1 market,10756,Garvey Ave,,El Monte,CA,91733,Convenience Store,st_218478,0,0,1,1,0,0,0,0,0,0,-83.13658,42.46054,garvey ave el monte ca el monte
+131,128,63254,63254,1 more stop inc,27430,5 Mile Rd,,Livonia,MI,48154,Convenience Store,st_063245,1,1,1,1,1,1,1,1,0,0,-74.17456914,40.92211184,5 mile rd livonia mi livonia
+132,129,278111,278111,1 ne quick choice,5612,Old Canton Rd,,Jackson,MS,39211,Convenience Store,st_277592,0,0,0,0,1,1,0,0,0,0,-83.31028,42.50203,old canton rd jackson ms jackson
+133,130,145416,145416,1 new afrida deli & grocery inc,120-03A,JAMAICA AVE,,RICHMOND HILL,NY,11418,Small Grocery Store,st_145403,1,1,1,1,0,0,0,0,0,0,-82.3047525,27.71251346,jamaica ave richmond hill ny richmond hill
+134,131,401050,401050,1 outlet,2025,E Highland Ave,Ste A,San Bernardino,CA,92404,Convenience Store,st_399281,0,0,0,0,0,0,0,0,1,1,-79.00134,34.63855,e highland ave san bernardino ca san bernardino
+135,132,394904,394904,1 pit stop,807,W Haggard Ave,,Elon,NC,27244,Convenience Store,st_393208,0,0,0,0,0,0,0,0,1,1,-122.12039,37.99674,w haggard ave elon nc elon
+136,133,225835,225835,1 place,440,NW 6th St,,Oklahoma City,OK,73102,Convenience Store,st_225595,0,0,1,1,1,1,1,1,1,1,-80.51935,41.22001,nw 6th st oklahoma city ok oklahoma city
+137,134,29389,29389,1 plus supercenter,2145,NE 164th St,,North Miami Beach,FL,33162,Super Store,st_029389,1,0,0,0,0,0,0,0,0,0,-72.75022699,42.12478898,ne 164th st north miami beach fl north miami beach
+138,135,350166,350166,1 pot seafood,412,Highway 155 S,,Mcdonough,GA,30253,Small Grocery Store,st_348971,0,0,0,0,0,0,1,1,1,1,-75.46348,39.85359,highway 155 s mcdonough ga mcdonough
+139,136,120760,120760,1 quick stop,206,N Main St,,Whitinsville,MA,1588,Convenience Store,st_120750,1,1,1,1,1,1,0,0,0,0,-73.91392144,40.70494709,n main st whitinsville ma whitinsville
+140,137,420408,420408,1 quick stop,3525,W Ledbetter Dr,,Dallas,TX,75233,Convenience Store,st_418430,0,0,0,0,0,0,0,0,0,1,-80.08898,26.61836,w ledbetter dr dallas tx dallas
+141,138,340576,340576,1 quik stop,206,N Main St,,Whitinsville,MA,1588,Convenience Store,st_339486,0,0,0,0,0,0,1,1,1,1,-119.86227,36.8081,n main st whitinsville ma whitinsville
+142,139,409946,409946,"1 spot marathon , inc",4095,Colorado Ave,,Sheffield Village,OH,44054,Convenience Store,st_408068,0,0,0,0,0,0,0,0,0,1,-112.4543,34.7503,colorado ave sheffield village oh sheffield village
+143,140,422732,422732,1 st grocery inc,9,1st St,,Clarksdale,MS,38614,Convenience Store,st_420732,0,0,0,0,0,0,0,0,0,1,-76.62088,37.21611,1st st clarksdale ms clarksdale
+144,141,315774,315774,1 star beverage,510,N Plano Rd,,Garland,TX,75042,Convenience Store,st_314946,0,0,0,0,0,1,1,1,1,1,-74.44219,40.48763,n plano rd garland tx garland
+145,142,206681,206681,1 star mini mart,4206,N Blackstone Ave,,Fresno,CA,93726,Convenience Store,st_206523,0,0,1,1,1,1,1,1,1,1,-112.09856,33.52409,n blackstone ave fresno ca fresno
+149,155,373821,373821,1 stop,536,E Martin Luther King Jr Dr,,Grand Coteau,LA,70541,Convenience Store,st_372383,0,0,0,0,0,0,0,1,1,1,-86.60571,34.74253,e martin luther king jr dr grand coteau la grand coteau
+148,153,36644,36644,1 stop,102,S Kansas Ave,,Bosworth,MO,64623,Convenience Store,st_036643,1,1,1,1,1,1,1,0,0,0,-83.02924869,42.58803955,s kansas ave bosworth mo bosworth
+147,152,96431,96431,1 stop,5101,Airport Blvd,,Austin,TX,78751,Convenience Store,st_096421,1,1,1,1,0,0,0,0,0,0,-83.06517891,39.95534257,airport blvd austin tx austin
+158,145,221868,221868,1 stop,9915,Thorn Grove Pike,,Strawberry Plains,TN,37871,Convenience Store,st_221650,0,0,1,1,1,1,1,1,1,1,-87.67548,41.83163,thorn grove pike strawberry plains tn strawberry plains
+157,150,269752,269752,1 stop,536,E Martin Luther King Jr. Drive,,Grand Coteau,LA,70541,Convenience Store,st_269287,0,0,0,0,1,1,0,0,0,0,-87.87299,41.90744,e martin luther king jr. drive grand coteau la grand coteau
+146,154,327992,327992,1 stop,3708,Shepherd Ln,,Balch Springs,TX,75180,Convenience Store,st_327031,0,0,0,0,0,0,1,1,0,0,-84.8607,35.15314,shepherd ln balch springs tx balch springs
+155,144,324592,324592,1 stop,1419.5,E Central Ave,,Wichita,KS,67214,Convenience Store,st_323680,0,0,0,0,0,0,1,1,1,0,-86.10918,40.48905,e central ave wichita ks wichita
+154,146,355893,355893,1 stop,101,S Kansas Ave,,Bosworth,MO,64623,Small Grocery Store,st_354632,0,0,0,0,0,0,0,1,1,1,-75.16428,39.91716,s kansas ave bosworth mo bosworth
+150,151,415181,415181,1 stop,8110,N Broadway,,Saint Louis,MO,63147,Convenience Store,st_413258,0,0,0,0,0,0,0,0,0,1,-74.18606,40.91729,n broadway saint louis mo saint louis
+151,147,335358,335358,1 stop,802,N West St,,Wichita,KS,67203,Convenience Store,st_334325,0,0,0,0,0,0,1,1,1,1,-84.24816,30.31735,n west st wichita ks wichita
+152,149,342753,342753,1 stop,103,N Graves St,,Mckinney,TX,75069,Convenience Store,st_341645,0,0,0,0,0,0,1,1,1,1,-87.22636,30.53243,n graves st mckinney tx mckinney
+153,148,381003,381003,1 stop,2912,West Highway 150,,Crouse,NC,28033,Convenience Store,st_379473,0,0,0,0,0,0,0,0,1,1,-105.02525,39.74693,west highway 150 crouse nc crouse
+156,143,414389,414389,1 stop,614A,Hanes Blvd,,Hughes Springs,TX,75656,Convenience Store,st_412471,0,0,0,0,0,0,0,0,0,1,-73.92161,40.83657,hanes blvd hughes springs tx hughes springs
+159,156,418720,418720,1 stop & go 1,1242,Diagonal Rd,,Akron,OH,44307,Convenience Store,st_416759,0,0,0,0,0,0,0,0,0,1,-97.49439,26.10572,diagonal rd akron oh akron
+160,157,379276,379276,1 stop & shop,12201,S Halsted St,,Chicago,IL,60628,Convenience Store,st_377772,0,0,0,0,0,0,0,1,1,1,-88.04036,41.59257,s halsted st chicago il chicago
+161,158,360510,360510,1 stop 1,1503,Gears Rd,,Houston,TX,77067,Convenience Store,st_359203,0,0,0,0,0,0,0,1,1,1,-77.04645,39.03993,gears rd houston tx houston
+162,159,369428,369428,1 stop 2,6154,Bellfort St,,Houston,TX,77033,Convenience Store,st_368021,0,0,0,0,0,0,0,1,1,1,-88.74631,35.67691,bellfort st houston tx houston
+164,160,357062,357062,1 stop 3,2850,Fry Rd,,Houston,TX,77084,Convenience Store,st_355788,0,0,0,0,0,0,0,1,1,0,-95.2379,29.85098,fry rd houston tx houston
+163,161,405185,405185,1 stop 3,409,N Dalton St,,Bartlett,TX,76511,Convenience Store,st_403363,0,0,0,0,0,0,0,0,0,1,-79.96087,40.4675,n dalton st bartlett tx bartlett
+165,162,255062,255062,1 stop action,115,E Arlington St,,Waterloo,IA,50703,Convenience Store,st_254681,0,0,0,1,0,0,0,0,0,0,-93.86569,32.47873,e arlington st waterloo ia waterloo
+166,163,224802,224802,1 stop centre,431,W 14th St,,Chicago Heights,IL,60411,Convenience Store,st_224570,0,0,1,1,1,1,1,1,1,1,-74.68816,40.23713,w 14th st chicago heights il chicago heights
+167,164,213278,213278,1 stop convenience,4770,Oceanside Blvd,,Oceanside,CA,92056,Convenience Store,st_213094,0,0,1,1,1,1,1,0,0,0,-80.19991,25.78913,oceanside blvd oceanside ca oceanside
+168,165,272406,272406,1 stop convenience store,505,W Main St,,Mobile,AL,36610,Convenience Store,st_271922,0,0,0,0,1,1,1,1,1,1,-91.95131,38.83942,w main st mobile al mobile
+169,166,342276,342276,1 stop convience store,800,E Clarendon Dr,,Dallas,TX,75203,Convenience Store,st_341173,0,0,0,0,0,0,1,1,0,0,-84.39208,33.75321,e clarendon dr dallas tx dallas
+170,167,267766,267766,1 stop deli & convenience,210,Commerce Pl,,Elizabeth,NJ,7201,Convenience Store,st_267308,0,0,0,1,1,1,0,0,0,0,-86.20763,39.88537,commerce pl elizabeth nj elizabeth
+171,168,407475,407475,1 stop deli & grocery 1,3701,Germantown Ave,,Philadelphia,PA,19140,Small Grocery Store,st_405619,0,0,0,0,0,0,0,0,0,1,-73.94889,40.82581,germantown ave philadelphia pa philadelphia
+172,169,337497,337497,1 stop deli & market inc 1,315,E High St,,Pottstown,PA,19464,Small Grocery Store,st_336446,0,0,0,0,0,0,1,1,1,1,-73.92691,40.62133,e high st pottstown pa pottstown
+173,170,396268,396268,1 stop deli and grocery 1 corp,6071,Flushing Ave,,Maspeth,NY,11378,Convenience Store,st_394556,0,0,0,0,0,0,0,0,1,1,-93.71507,32.51684,flushing ave maspeth ny maspeth
+174,171,331257,331257,1 stop deli and grocery corp,6071,Flushing Ave,,Maspeth,NY,11378,Convenience Store,st_330264,0,0,0,0,0,0,1,1,0,0,-97.59252,38.81257,flushing ave maspeth ny maspeth
+175,172,287566,287566,1 stop express,28204,State Route 1,,West Harrison,IN,47060,Combination Grocery/Other,st_286952,0,0,0,0,1,1,1,1,0,0,-73.29675,40.70958,state route 1 west harrison in west harrison
+176,173,259776,259776,1 stop food & convenience store,703,Spring St,,Paso Robles,CA,93446,Convenience Store,st_259372,0,0,0,1,1,1,1,1,1,0,-85.76847,38.24718,spring st paso robles ca paso robles
+177,174,147812,147812,1 stop food & liquor,6326,Main Ave,Ste 2,Orangevale,CA,95662,Convenience Store,st_147799,1,1,1,1,1,1,1,1,1,1,-111.8220619,33.21868152,main ave orangevale ca orangevale
+178,175,399776,399776,1 stop food market,7990,California City Blvd,,California City,CA,93505,Convenience Store,st_398019,0,0,0,0,0,0,0,0,1,1,-119.02105,35.41463,california city blvd california city ca california city
+185,177,257475,257475,1 stop food mart,3409,W T C Jester Blvd,,Houston,TX,77018,Convenience Store,st_257080,0,0,0,1,1,1,1,1,1,1,-101.93002,33.54886,w t c jester blvd houston tx houston
+183,176,325144,325144,1 stop food mart,1103,N King St,,Hampton,VA,23669,Convenience Store,st_324224,0,0,0,0,0,0,1,1,0,0,-82.37243,29.62336,n king st hampton va hampton
+182,178,352915,352915,1 stop food mart,8901,W Highway 22,,Crestwood,KY,40014,Convenience Store,st_351685,0,0,0,0,0,0,1,1,1,1,-76.08633,43.64572,w highway 22 crestwood ky crestwood
+181,179,195221,195221,1 stop food mart,445,S Park Ave,,Titusville,FL,32796,Convenience Store,st_195102,0,1,1,0,0,0,0,0,0,0,-105.08145,39.88009,s park ave titusville fl titusville
+180,181,127681,127681,1 stop food mart,4443,Benning Rd NE,,Washington,DC,20019,Convenience Store,st_127671,1,1,1,1,1,1,0,0,0,0,-71.07681035,42.34115312,benning rd ne washington dc washington
+179,182,38842,38842,1 stop food mart,3409,W T C Jester Blvd,,Houston,TX,77018,Convenience Store,st_038841,1,1,1,0,0,0,0,0,0,0,-74.05282769,40.73514308,w t c jester blvd houston tx houston
+184,180,407711,407711,1 stop food mart,655,Gate City Hwy,,Bristol,VA,24201,Convenience Store,st_405851,0,0,0,0,0,0,0,0,0,1,-114.84445,35.97461,gate city hwy bristol va bristol
+186,183,318955,318955,1 stop food mart 2,610,Stone St,,Cocoa,FL,32922,Convenience Store,st_318085,0,0,0,0,0,1,1,0,0,0,-90.27916,29.97953,stone st cocoa fl cocoa
+187,184,231316,231316,1 stop food mart inc,3612,W 16th St,,Chicago,IL,60623,Convenience Store,st_231054,0,0,1,1,0,0,0,0,0,0,-76.506,39.37898,w 16th st chicago il chicago
+188,185,262958,262958,1 stop food mart inc,445,S Park Ave,,Titusville,FL,32796,Convenience Store,st_262529,0,0,0,1,1,1,1,1,1,1,-122.46155,37.78534,s park ave titusville fl titusville
+190,187,13665,13665,1 stop food store,4517,Saturn Rd,,Garland,TX,75041,Convenience Store,st_013666,1,1,0,0,0,0,0,0,0,0,-78.72406634,40.47797505,saturn rd garland tx garland
+191,188,298656,298656,1 stop food store,1600,MARSH LN,,CARROLLTON,TX,75006,Convenience Store,st_297975,0,0,0,0,1,1,1,1,1,1,-79.88269,37.79294,marsh ln carrollton tx carrollton
+189,186,228406,228406,1 stop food store,450,State Route 35 N,,Neptune,NJ,7753,Convenience Store,st_228156,0,0,1,0,0,0,0,0,0,0,-110.94377,32.26469,state route 35 n neptune nj neptune
+192,189,340359,340359,1 stop for all inc,6106,3rd Ave,,Brooklyn,NY,11220,Small Grocery Store,st_339274,0,0,0,0,0,0,1,1,0,0,-86.38842,36.23469,3rd ave brooklyn ny brooklyn
+193,190,331865,331865,1 stop grocery,754,Sycamore St,,Buffalo,NY,14212,Convenience Store,st_330865,0,0,0,0,0,0,1,0,0,0,-96.73679,33.08548,sycamore st buffalo ny buffalo
+194,191,46519,46519,1 stop inc,536,Martin Luther King Dr,,Grand Coteau,LA,70541,Convenience Store,st_046517,1,1,1,1,0,0,0,0,0,0,-74.586622,40.54613061,martin luther king dr grand coteau la grand coteau
+196,192,79148,79148,1 stop market,163,S Ramona Blvd,,San Jacinto,CA,92583,Convenience Store,st_079138,1,1,1,1,1,1,1,1,1,1,-113.9838457,46.86907094,s ramona blvd san jacinto ca san jacinto
+195,194,38903,38903,1 stop market,2511,Rio Linda Blvd,,Sacramento,CA,95815,Small Grocery Store,st_038902,1,1,0,0,0,0,0,0,0,0,-79.72894003,40.8456695,rio linda blvd sacramento ca sacramento
+197,193,238528,238528,1 stop market,2315,S Central Ave,,Los Angeles,CA,90011,Convenience Store,st_238232,0,0,0,1,0,0,0,0,0,0,-94.35452,38.25681,s central ave los angeles ca los angeles
+198,195,200749,200749,1 stop mart,3750,Battleground Ave,,Greensboro,NC,27410,Convenience Store,st_200610,0,0,1,1,1,1,0,0,0,0,-77.03496,42.55354,battleground ave greensboro nc greensboro
+199,196,419546,419546,1 stop mart llc,11930,US Highway 23 S,,Ossineke,MI,49766,Medium Grocery Store,st_417575,0,0,0,0,0,0,0,0,0,1,-111.28259,47.49427,us highway 23 s ossineke mi ossineke
+200,197,245127,245127,1 stop mobil mart,402,S Chester Ave,,Bakersfield,CA,93304,Convenience Store,st_244803,0,0,0,1,0,0,0,0,0,0,-98.10948,37.6464,s chester ave bakersfield ca bakersfield
+201,198,406986,406986,1 stop no.3,2850,Fry Rd,,Houston,TX,77084,Convenience Store,st_405136,0,0,0,0,0,0,0,0,0,1,-80.96346,40.07229,fry rd houston tx houston
+209,206,118648,118648,1 stop shop,1605,N Cedar Ave,,Fresno,CA,93703,Convenience Store,st_118638,1,1,0,0,0,0,0,0,0,0,-84.50766822,39.07418734,n cedar ave fresno ca fresno
+202,199,325223,325223,1 stop shop,1605,N Cedar Ave,,Fresno,CA,93703,Convenience Store,st_324302,0,0,0,0,0,0,1,1,1,1,-79.09765,41.16534,n cedar ave fresno ca fresno
+206,203,405507,405507,1 stop shop,1115,W Bush St,,Lemoore,CA,93245,Convenience Store,st_403681,0,0,0,0,0,0,0,0,0,1,-73.07662,40.74234,w bush st lemoore ca lemoore
+205,202,181962,181962,1 stop shop,906,N Harper St,,Laurens,SC,29360,Convenience Store,st_181887,0,1,0,0,0,0,0,0,0,0,-82.45247,42.96871,n harper st laurens sc laurens
+204,201,383956,383956,1 stop shop,1325,S Main St,,Cedartown,GA,30125,Convenience Store,st_382384,0,0,0,0,0,0,0,0,1,0,-74.20158,40.67548,s main st cedartown ga cedartown
+203,200,212186,212186,1 stop shop,801,W Normantown Rd,,Romeoville,IL,60446,Medium Grocery Store,st_212005,0,0,1,0,0,0,0,0,0,0,-82.99505,42.43473,w normantown rd romeoville il romeoville
+207,204,345792,345792,1 stop shop,2017,Maple Ave SW,Ste A,Rome,GA,30161,Convenience Store,st_344652,0,0,0,0,0,0,1,1,0,0,-81.80238,35.02011,maple ave sw rome ga rome
+208,205,280015,280015,1 stop shop,300,6th Ave,Ste 101,Pittsburgh,PA,15222,Convenience Store,st_279483,0,0,0,0,1,0,0,0,0,0,-98.54282,33.85814,6th ave pittsburgh pa pittsburgh
+210,207,147191,147191,1 stop shop grocery,225,S 13th St,,Wilmington,NC,28401,Convenience Store,st_147178,1,1,1,1,1,1,1,0,0,0,-79.65639631,35.73733012,s 13th st wilmington nc wilmington
+211,208,414272,414272,1 stop shop grocery,225,S 13th St,,Wilmington,NC,28401,Convenience Store,st_412354,0,0,0,0,0,0,0,0,0,1,-84.44272,33.74835,s 13th st wilmington nc wilmington
+212,209,251848,251848,1 stop shop n wash llc,1008,Summit Ave,,Jersey City,NJ,7307,Small Grocery Store,st_251483,0,0,0,1,1,1,0,0,0,0,-108.72899,42.83263,summit ave jersey city nj jersey city
+213,210,414858,414858,1 stop shop rite inc,1110,S Long Beach Blvd,Ste 2,Compton,CA,90221,Small Grocery Store,st_412940,0,0,0,0,0,0,0,0,0,1,-114.03599,35.22186,s long beach blvd compton ca compton
+214,211,286815,286815,"1 stop sunoco gas station, inc.",2200,Old Trail Rd,,Etters,PA,17319,Convenience Store,st_286207,0,0,0,0,1,1,0,0,0,0,-122.10057,47.94559,old trail rd etters pa etters
+215,212,364739,364739,1 stop tobacco hub,2115,Roanoke St,,Christiansburg,VA,24073,Convenience Store,st_363385,0,0,0,0,0,0,0,1,1,1,-90.26959,38.60309,roanoke st christiansburg va christiansburg
+216,213,267463,267463,1 stop variety store,7130,Buford Hwy NE,Ste F,Doraville,GA,30340,Small Grocery Store,st_267006,0,0,0,1,1,1,0,0,0,0,-80.86272,35.59974,buford hwy ne doraville ga doraville
+217,214,189119,189119,"1 stop, llc",235,Main St,,Ririe,ID,83443,Small Grocery Store,st_189019,0,1,1,1,0,0,0,0,0,0,-87.41056,41.5494,main st ririe id ririe
+218,215,249073,249073,1 stopshop,1601,McDonald Ave,,Brooklyn,NY,11230,Convenience Store,st_248727,0,0,0,1,1,1,0,0,0,0,-85.54796,37.88541,mcdonald ave brooklyn ny brooklyn
+219,216,405239,405239,1 suite gift shop,1,Elizabeth Pl,,Dayton,OH,45417,Convenience Store,st_403417,0,0,0,0,0,0,0,0,0,1,-95.28407,32.06825,elizabeth pl dayton oh dayton
+220,217,409480,409480,1 thomaston road llc,1,Thomaston Rd,,Morris,CT,6763,Convenience Store,st_407605,0,0,0,0,0,0,0,0,0,1,-84.48665,33.75238,thomaston rd morris ct morris
+221,218,388501,388501,1 to 3 dollar express,436,E Colonia Rd,,Oxnard,CA,93030,Convenience Store,st_386887,0,0,0,0,0,0,0,0,1,1,-88.41324,33.50331,e colonia rd oxnard ca oxnard
+222,219,281198,281198,1 to 5 nutritional center,1105,Broadway,Ste 203,Chula Vista,CA,91911,Combination Grocery/Other,st_280654,0,0,0,0,1,1,0,0,0,0,-80.54869,34.99202,broadway chula vista ca chula vista
+223,220,288586,288586,1 tony deli & grocery inc,11501,Liberty Ave,,South Richmond Hill,NY,11419,Convenience Store,st_287969,0,0,0,0,1,1,1,1,1,0,-86.8868,35.99587,liberty ave south richmond hill ny south richmond hill
+224,221,285308,285308,1 turrell place,15459,Hwy77,,Turrell,AR,72384,Small Grocery Store,st_284713,0,0,0,0,1,1,1,0,0,0,-84.09248,34.0492,hwy77 turrell ar turrell
+225,222,294328,294328,1 up discount llc d/b/a 1 up mini-mart,2378,Grand Ave,,Baldwin,NY,11510,Convenience Store,st_293674,0,0,0,0,1,0,0,0,0,0,-80.74727,28.35768,grand ave baldwin ny baldwin
+226,223,391374,391374,1 zone 11,950,Wolcott St,,Waterbury,CT,6705,Convenience Store,st_389728,0,0,0,0,0,0,0,0,1,1,-92.26721,34.76721,wolcott st waterbury ct waterbury
+227,224,77243,77243,1$ warehouse,2901,WHITTIER BL. G & E,,LOS ANGELES,CA,90023,Convenience Store,st_077233,1,0,0,0,0,0,0,0,0,0,-71.398836,41.8885172,whittier bl. g & e los angeles ca los angeles
+228,225,52568,52568,"1, 2. 3 discount store inc",160,Broadway,,Newburgh,NY,12550,Medium Grocery Store,st_052565,1,1,1,1,1,1,0,0,0,0,-83.58930736,32.54372152,broadway newburgh ny newburgh
+229,226,112571,112571,"1,2,3 farm",218-23,JAMAICA AVE,,JAMAICA,NY,11428,Combination Grocery/Other,st_112561,1,1,1,1,1,1,1,1,1,0,-73.93366986,40.67149805,jamaica ave jamaica ny jamaica
+230,227,80206,80206,"1,2,3, quick, inc",73,Whittier Dr,,Mastic Beach,NY,11951,Convenience Store,st_080196,1,1,1,1,1,1,1,1,1,1,-89.84021226,31.23696204,whittier dr mastic beach ny mastic beach
+231,228,278092,278092,1-30 superstore,612,E Roosevelt Rd,,Little Rock,AR,72206,Convenience Store,st_277573,0,0,0,0,1,1,1,1,1,1,-84.54823,39.21641,e roosevelt rd little rock ar little rock
+232,229,246668,246668,1-quick stop,3525,W Ledbetter Dr,,Dallas,TX,75233,Convenience Store,st_246332,0,0,0,1,1,1,1,1,0,0,-85.3544,34.2544,w ledbetter dr dallas tx dallas
+233,230,108731,108731,1-stop,1301,E Houston Ave,,Visalia,CA,93292,Convenience Store,st_108721,1,1,1,1,1,1,1,1,0,0,-117.980631,34.5210865,e houston ave visalia ca visalia
+234,231,276930,276930,1-stop food store,5101,Airport Blvd,,Austin,TX,78751,Convenience Store,st_276421,0,0,0,0,1,1,1,1,1,1,-80.16303,25.92702,airport blvd austin tx austin
+235,232,406881,406881,1-stop food store,2417,N Tryon St,Ste E,Charlotte,NC,28206,Convenience Store,st_405031,0,0,0,0,0,0,0,0,0,1,-73.87942,40.74072,n tryon st charlotte nc charlotte
+236,233,222079,222079,1-stop food stores,1491,N Leroy St,,Fenton,MI,48430,Convenience Store,st_221861,0,0,1,1,1,1,1,1,1,1,-81.9456,30.08906,n leroy st fenton mi fenton
+237,234,289993,289993,1-stop food stores 22,6010,Davison Rd,,Burton,MI,48509,Convenience Store,st_289371,0,0,0,0,1,1,1,1,1,1,-90.40597,42.16425,davison rd burton mi burton
+238,235,289996,289996,1-stop food stores 30,1509,S State Rd,,Davison,MI,48423,Convenience Store,st_289374,0,0,0,0,1,1,1,1,1,1,-121.8764,37.41572,s state rd davison mi davison
+239,236,289990,289990,1-stop food stores 31,8005,Davison Rd,,Davison,MI,48423,Convenience Store,st_289368,0,0,0,0,1,1,1,1,1,1,-83.83167,34.27987,davison rd davison mi davison
+240,237,412987,412987,1-stop lehigh mart,1240,Lehigh St,,Allentown,PA,18103,Convenience Store,st_411082,0,0,0,0,0,0,0,0,0,1,-97.93861,29.88345,lehigh st allentown pa allentown
+241,238,90208,90208,1-stop market,1501,N China Lake Blvd,,Ridgecrest,CA,93555,Convenience Store,st_090198,1,1,1,1,1,1,1,1,1,0,-107.7833416,39.54027074,n china lake blvd ridgecrest ca ridgecrest
+242,239,118431,118431,1-stop market,4324,Highway 281,,Belcourt,ND,58316,Supermarket,st_118421,1,1,1,1,1,1,1,1,1,1,-98.47793122,29.3828381,highway 281 belcourt nd belcourt
+243,240,370118,370118,1-stop shop,1512,S Belt Line Rd,Ste 2,Dallas,TX,75253,Convenience Store,st_368703,0,0,0,0,0,0,0,1,1,1,-79.82932,35.96438,s belt line rd dallas tx dallas
+244,241,263811,263811,1.00 $ plus store,11122,Airline Dr,,Houston,TX,77037,Convenience Store,st_263376,0,0,0,1,1,1,1,1,1,0,-86.35353,33.27863,airline dr houston tx houston
+245,242,204993,204993,1.00 & discount mart,2056,Pacific Ave,Ste 102,Long Beach,CA,90806,Convenience Store,st_204842,0,0,1,1,1,1,1,1,1,1,-97.60103,35.43553,pacific ave long beach ca long beach
+246,243,339875,339875,1.00 + supermarket,8951,Richmond Ave,,Houston,TX,77063,Convenience Store,st_338791,0,0,0,0,0,0,1,0,0,0,-93.60014,41.73595,richmond ave houston tx houston
+247,244,3639,3639,1.6.8. supermarket llc,5722,8th Ave,,Brooklyn,NY,11220,Medium Grocery Store,st_003640,1,1,1,0,0,0,0,0,0,0,-75.44568211,39.16047584,8th ave brooklyn ny brooklyn
+248,245,188486,188486,1/2 off & more,402,N Maryland Ave,,Wilmington,DE,19804,Small Grocery Store,st_188387,0,1,1,0,0,0,0,0,0,0,-89.51289,42.97043,n maryland ave wilmington de wilmington
+249,246,370930,370930,1/2 price grocery,2808,Randleman Rd,Ste G,Greensboro,NC,27406,Combination Grocery/Other,st_369507,0,0,0,0,0,0,0,1,1,0,-94.17139,30.08029,randleman rd greensboro nc greensboro
+250,247,200411,200411,10 & hoover sunoco,25025,Hoover Rd,,Warren,MI,48089,Convenience Store,st_200273,0,0,1,1,1,1,1,1,1,1,-82.0639,41.28376,hoover rd warren mi warren
+251,248,392395,392395,10 & little mack shell,20725,E 10 Mile Rd,,Saint Clair Shores,MI,48080,Convenience Store,st_390729,0,0,0,0,0,0,0,0,1,1,-82.0621,32.37873,e 10 mile rd saint clair shores mi saint clair shores
+251,248,392395,392395,10 & little mack shell,20725,E 10 Mile Rd,,Saint Clair Shores,MI,48080,Convenience Store,st_390724,0,0,0,0,0,0,0,0,1,1,-82.0621,32.37873,e 10 mile rd saint clair shores mi saint clair shores
+248,245,188486,188486,1/2 off & more,402,N Maryland Ave,,Wilmington,DE,19804,Small Grocery Store,st_188386,0,1,1,0,0,0,0,0,0,0,-89.51289,42.97043,n maryland ave wilmington de wilmington
+249,246,370930,370930,1/2 price grocery,2808,Randleman Rd,Ste G,Greensboro,NC,27406,Combination Grocery/Other,st_369517,0,0,0,0,0,0,0,1,1,0,-94.17139,30.08029,randleman rd greensboro nc greensboro
+250,247,200411,200411,10 & hoover sunoco,25025,Hoover Rd,,Warren,MI,48089,Convenience Store,st_200283,0,0,1,1,1,1,1,1,1,1,-82.0639,41.28376,hoover rd warren mi warren
