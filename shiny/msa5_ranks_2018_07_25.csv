@@ -1,0 +1,46 @@
+GEOID,NAME,msa_short,cdivision,estimate,ALAND,rank
+16980,"Chicago-Naperville-Elgin, IL-IN-WI","Chicago, IL",East North Central,9528396,18639937202,D1
+19820,"Detroit-Warren-Dearborn, MI","Detroit, MI",East North Central,4296731,10072890471,D2
+41180,"St. Louis, MO-IL","St. Louis, MO",East North Central,2803449,20366571748,D3
+17140,"Cincinnati, OH-KY-IN","Cincinnati, OH",East North Central,2146410,10788614537,D4
+17460,"Cleveland-Elyria, OH","Cleveland, OH",East North Central,2061630,5174453678,D5
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN","Nashville, TN",East South Central,1794570,16321406859,D1
+32820,"Memphis, TN-MS-AR","Memphis, TN",East South Central,1341339,12910475338,D2
+31140,"Louisville/Jefferson County, KY-IN","Louisville/Jefferson County, KY",East South Central,1269550,9268177056,D3
+13820,"Birmingham-Hoover, AL","Birmingham, AL",East South Central,1141309,13674118813,D4
+28940,"Knoxville, TN","Knoxville, TN",East South Central,857111,9066318161,D5
+35620,"New York-Newark-Jersey City, NY-NJ-PA","New York, NY",Middle Atlantic,20031443,21479624680,D1
+37980,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD","Philadelphia, PA",Middle Atlantic,6047721,11919740470,D2
+38300,"Pittsburgh, PA","Pittsburgh, PA",Middle Atlantic,2354926,13678951234,D3
+15380,"Buffalo-Cheektowaga-Niagara Falls, NY","Buffalo, NY",Middle Atlantic,1135503,4053478186,D4
+40380,"Rochester, NY","Rochester, NY",Middle Atlantic,1082226,8459596944,D5
+38060,"Phoenix-Mesa-Scottsdale, AZ","Phoenix, AZ",Mountain,4486153,37723390850,D1
+19740,"Denver-Aurora-Lakewood, CO","Denver, CO",Mountain,2752056,21615568416,D2
+29820,"Las Vegas-Henderson-Paradise, NV","Las Vegas, NV",Mountain,2070153,20437567839,D3
+41620,"Salt Lake City, UT","Salt Lake City, UT",Mountain,1154504,19902220729,D4
+46060,"Tucson, AZ","Tucson, AZ",Mountain,1003338,23794325275,D5
+14460,"Boston-Cambridge-Newton, MA-NH","Boston, MA",New England,4728844,9032948795,D1
+39300,"Providence-Warwick, RI-MA","Providence, RI",New England,1609359,4110353646,D2
+25540,"Hartford-West Hartford-East Hartford, CT","Hartford, CT",New England,1211826,3923007262,D3
+14860,"Bridgeport-Stamford-Norwalk, CT","Bridgeport, CT",New England,941618,1618653173,D4
+49340,"Worcester, MA-CT","Worcester, MA",New England,930667,5240884186,D5
+31080,"Los Angeles-Long Beach-Anaheim, CA","Los Angeles, CA",Pacific,13189366,12558109704,D1
+41860,"San Francisco-Oakland-Hayward, CA","San Francisco, CA",Pacific,4577530,6417135149,D2
+40140,"Riverside-San Bernardino-Ontario, CA","Riverside, CA",Pacific,4430646,70612045943,D3
+42660,"Seattle-Tacoma-Bellevue, WA","Seattle, WA",Pacific,3671095,15208919234,D4
+41740,"San Diego-Carlsbad, CA","San Diego, CA",Pacific,3253356,10895213672,D5
+47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV","Washington, DC",South Atlantic,6011752,16177768536,D1
+33100,"Miami-Fort Lauderdale-West Palm Beach, FL","Miami, FL",South Atlantic,5926955,13143228815,D2
+12060,"Atlanta-Sandy Springs-Roswell, GA","Atlanta, GA",South Atlantic,5612777,22485752743,D3
+45300,"Tampa-St. Petersburg-Clearwater, FL","Tampa, FL",South Atlantic,2927714,6512735477,D4
+12580,"Baltimore-Columbia-Towson, MD","Baltimore, MD",South Atlantic,2780873,6738550371,D5
+33460,"Minneapolis-St. Paul-Bloomington, MN-WI","Minneapolis, MN",West North Central,3488436,19781134890,D1
+28140,"Kansas City, MO-KS","Kansas City, MO",West North Central,2070147,18792243770,D2
+36540,"Omaha-Council Bluffs, NE-IA","Omaha, NE",West North Central,904834,11265546715,D3
+48620,"Wichita, KS","Wichita, KS",West North Central,640505,12981358615,D4
+19780,"Des Moines-West Des Moines, IA","Des Moines, IA",West North Central,611755,7468736330,D5
+19100,"Dallas-Fort Worth-Arlington, TX","Dallas, TX",West South Central,6957123,24034136107,D1
+26420,"Houston-The Woodlands-Sugar Land, TX","Houston, TX",West South Central,6482592,21393090794,D2
+41700,"San Antonio-New Braunfels, TX","San Antonio, TX",West South Central,2332345,18939816057,D3
+12420,"Austin-Round Rock, TX","Austin, TX",West South Central,1942615,10930289714,D4
+36420,"Oklahoma City, OK","Oklahoma City, OK",West South Central,1337075,14274999557,D5

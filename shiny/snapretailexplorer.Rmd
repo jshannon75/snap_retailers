@@ -1,0 +1,158 @@
+---
+title: "SNAP retailers during the Great Recession (2008-2017): Changes in and across metro areas"
+runtime: shiny
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(shiny)
+library(tidyverse)
+library(leaflet)
+library(sf)
+
+msa5<-read_csv("msa5_ranks_2018_07_25.csv") %>%
+  arrange(msa_short)
+```
+
+Column {.sidebar data-width=400}
+-----------------------------------------------------------------------
+
+### Data selection
+
+This application allows you to explore the database of SNAP authorized retailers from 2008-2017 in 45 metropolitan areas, identified by their largest city.
+
+Use the tools below to select the city, types of retailers, and years to include. Click on a point to see more information on that retailer.
+
+```{r}
+selectInput("msa","MSA selection",
+            choices=msa5$msa_short)
+
+sliderInput("years", "First year in the dataset", sep="",
+            min = 2008, max = 2017, value = c(2008, 2017))
+
+checkboxGroupInput("storegroup", 
+                    ("Retailer types"), 
+                    choices = list("Supermarkets/supercenters" = "Supermarket", 
+                                   "Groceries" = "Grocer", 
+                                   "Convenience/dollar stores" = "Small retail",
+                                   "Specialty retailers"="Specialty",
+                                   "Local foods"="Local foods"),
+                              selected = c("Supermarket","Grocer", "Small retail","Specialty","Local foods"))
+
+HTML("Data source: USDA Benefits Redemption Division<br><br>Download a spreadsheet of these data<br>")
+
+downloadButton('downloadData','Download Result Set')
+
+downloadHandler(filename = function() {
+     paste("SNAPretailers_",input$msa,"_",Sys.Date(),".csv",sep="")
+   },
+     content = function(file) {
+     write.csv(msadata_reactive(), file, row.names = FALSE)
+   }
+)
+
+
+```
+
+Column {.tabset}
+-----------------------------------------------------------------------
+
+### Retailer map
+
+```{r}
+#Load store data from MSA selection
+msadata_reactive<-reactive({
+  fips<-as.character(msa5 %>%
+    dplyr::filter(msa_short==input$msa) %>%
+    mutate(fips=paste("G",GEOID,sep="")) %>%
+    select(fips))
+  
+  st_read("storepoints_msa5.gpkg",layer=fips,stringsAsFactors=FALSE) %>%
+    mutate(lat=X,long=Y,
+           #Create a categorical year variable
+            year_range=case_when(year_first==2008~"2008",
+                                  year_first>2008&year_first<=2011~"2009-2011",
+                                  year_first<=2014~"2012-2014",
+                                  year_first<=2017~"2015-2017"),
+      #Define the popup
+      content=paste("<strong><size=1>",X5,"</strong></size>", 
+                       "<br><b>",addr_num," ",addr_st," ",addr_add,
+                       "<br>",city,", ",state,"  ",zip5,"</b>",
+                       "<br><br><b>USDA store classification:</b> ",store_type,
+                       "<br><b>Group classification: </b>",store_group,
+                       "<br><b>First year in the data: </b>",year_first,
+                       "<br><b>Last year in the data: </b>",year_last,sep=""))
+  })
+
+#Subset data based on store type and year
+
+msadata_df<-observeEvent(input$msa, {
+  msadata_df<-msadata_reactive()
+  st_geometry(msadata_df)<-NULL
+  msadata_df %>%
+    select(-lat,-long,-year_range,-content)
+})
+
+msadata_select<-reactive({
+  msadata_reactive() %>%
+    filter(store_group %in% input$storegroup) %>%
+    filter(year_first>=input$years[1]&year_first<=input$years[2])
+})
+
+#Create a map  
+output$map<-renderLeaflet({
+  buffer<-0.03
+  long_max<-max(msadata_reactive()$X)+buffer
+  latit_max<-max(msadata_reactive()$Y)+buffer
+  long_min<-min(msadata_reactive()$X)-buffer
+  latit_min<-min(msadata_reactive()$Y)-buffer
+
+  leaflet(msadata_reactive()) %>%
+  fitBounds(long_min,latit_min,long_max,latit_max) %>%
+   addProviderTiles(providers$Esri.WorldGrayCanvas) 
+})
+
+observeEvent(input$msa,{
+  buffer<-0.02
+  long_max1<-max(msadata_reactive()$X)+buffer
+  latit_max1<-max(msadata_reactive()$Y)+buffer
+  long_min1<-min(msadata_reactive()$X)-buffer
+  latit_min1<-min(msadata_reactive()$Y)-buffer
+  
+  leafletProxy("map") %>%
+    fitBounds(long_min1,latit_min1,long_max1,latit_max1)})
+
+observeEvent(c(input$storegroup, input$years,input$msa),{ 
+ storepal<-colorFactor(palette="YlOrRd",msadata_reactive()$year_range,reverse=TRUE)
+  
+ leafletProxy("map") %>%
+    clearMarkers() %>%
+    clearControls() %>%
+    addCircleMarkers(data=msadata_select(),
+               opacity=0.4,
+               color="#603a31",
+               weight=2,
+               fillOpacity=0.8,
+               radius=4,
+               fillColor=~storepal(year_range),
+               popup=msadata_select()$content) %>%
+   addLegend(data=msadata_reactive(),"topright",pal=storepal,
+             values=~year_range,title="First year in the dataset",
+             opacity=1)
+})
+
+leafletOutput("map")
+
+```
+
+### About this dataset
+
+This site maps SNAP autorized retailers from a database of approximately 450,000 total records from 2008 through 2017. These records were obtained through a request to USDA's Benefit Redemptions Division and linked across years by name and address. The full dataset includes all authorized retailers, but this site maps the five largest metropolitan statistical areas (MSAs) in each of the nine census regions. Each MSA is identified by its largest city in the dropdown menu. 
+
+The number of SNAP retailers increased significantly in the years following the Great Recession, and this website allows users to identify changes in retailer type over time. The control tools allow users to select stores based on when they first appear in the dataset. Stores appearing in 2008 may have been present before this period, and those with a last year of 2017 may still be open, as these are the current start and end points of the data. To see retailers who entered after 2009, for example, a user could move the left slider button to 2009. To see those entering from 2009-2011, the two buttons would be set to those two years. Users also have the ability to filter stores to see just certain types of retailers. These groups are based on USDA's store classifications.
+
+Users can download store data for any city using the button provided here. The full dataset is available on the [project website](https://github.com/jshannon75/snap_retailers_2008_2017). A fuller description of the dataset is also available in [this summary document](https://jshannon75.github.io/snap_retailers_2008_2017/overview_paper).

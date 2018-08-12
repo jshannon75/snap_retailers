@@ -1,0 +1,12 @@
+name: snapretailexplorer
+title: snapretailexplorer
+username:
+account: comapuga
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 398946
+bundleId: 1531468
+url: https://comapuga.shinyapps.io/snapretailexplorer/
+when: 1534106844.34452
+asMultiple: FALSE
+asStatic: FALSE
