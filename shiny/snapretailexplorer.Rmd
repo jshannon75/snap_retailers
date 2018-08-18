@@ -5,6 +5,10 @@ output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
+    navbar:
+      - { title: "Source code", href: "https://github.com/jshannon75/snap_retailers_2008_2017/shiny/snapretailexplorer.Rmd", align: right }
+      - { title: "Project site", href: "https://github.com/jshannon75/snap_retailers_2008_2017", align: right}
+    
 ---
 
 ```{r setup, include=FALSE}
@@ -16,7 +20,11 @@ library(sf)
 
 msa5<-read_csv("msa5_ranks_2018_07_25.csv") %>%
   arrange(msa_short)
+
 ```
+
+Map by metro area
+=====================================  
 
 Column {.sidebar data-width=400}
 -----------------------------------------------------------------------
@@ -31,8 +39,10 @@ Use the tools below to select the city, types of retailers, and years to include
 selectInput("msa","MSA selection",
             choices=msa5$msa_short)
 
-sliderInput("years", "First year in the dataset", sep="",
+sliderInput("years", "First year authorized for SNAP", sep="",
             min = 2008, max = 2017, value = c(2008, 2017))
+
+helpText("We do not have data on retailer authorization before 2008.")
 
 checkboxGroupInput("storegroup", 
                     ("Retailer types"), 
@@ -43,7 +53,11 @@ checkboxGroupInput("storegroup",
                                    "Local foods"="Local foods"),
                               selected = c("Supermarket","Grocer", "Small retail","Specialty","Local foods"))
 
-HTML("Data source: USDA Benefits Redemption Division<br><br>Download a spreadsheet of these data<br>")
+HTML("If no stores are visible, click on the button below")
+
+actionButton("loadstores1","Load stores")
+
+HTML("<br>Download a spreadsheet of these data<br>")
 
 downloadButton('downloadData','Download Result Set')
 
@@ -55,13 +69,13 @@ downloadHandler(filename = function() {
    }
 )
 
+HTML("<br>Data source: USDA Benefits Redemption Division<br>")
+
 
 ```
 
-Column {.tabset}
+Column {data-height=600}
 -----------------------------------------------------------------------
-
-### Retailer map
 
 ```{r}
 #Load store data from MSA selection
@@ -71,21 +85,21 @@ msadata_reactive<-reactive({
     mutate(fips=paste("G",GEOID,sep="")) %>%
     select(fips))
   
-  st_read("storepoints_msa5.gpkg",layer=fips,stringsAsFactors=FALSE) %>%
+  data<-st_read("storepoints_msa5.gpkg",layer=fips,stringsAsFactors=FALSE) %>%
     mutate(lat=X,long=Y,
-           #Create a categorical year variable
-            year_range=case_when(year_first==2008~"2008",
-                                  year_first>2008&year_first<=2011~"2009-2011",
-                                  year_first<=2014~"2012-2014",
-                                  year_first<=2017~"2015-2017"),
       #Define the popup
-      content=paste("<strong><size=1>",X5,"</strong></size>", 
-                       "<br><b>",addr_num," ",addr_st," ",addr_add,
+      addr_full=if_else(is.na(addr_add),
+                         paste("<br><b>",addr_num," ",addr_st," ",sep=""),
+                         paste("<br><b>",addr_num," ",addr_st," ",addr_add,sep="")),
+      year_range=case_when(year_first==year_last~as.character(year_first),
+                           year_first!=year_last~paste(year_first,year_last,sep="-")),
+      content=paste("<strong><size=1>",store_name,"</strong></size>", 
+                       addr_full,
                        "<br>",city,", ",state,"  ",zip5,"</b>",
                        "<br><br><b>USDA store classification:</b> ",store_type,
-                       "<br><b>Group classification: </b>",store_group,
-                       "<br><b>First year in the data: </b>",year_first,
-                       "<br><b>Last year in the data: </b>",year_last,sep=""))
+                       "<br><b>Group category: </b>",store_group,
+                       "<br><b>Years authorized for SNAP*: </b>",year_range,
+                       "<br>*2008 and 2017 are the first and last years data are available.",sep=""))
   })
 
 #Subset data based on store type and year
@@ -94,7 +108,7 @@ msadata_df<-observeEvent(input$msa, {
   msadata_df<-msadata_reactive()
   st_geometry(msadata_df)<-NULL
   msadata_df %>%
-    select(-lat,-long,-year_range,-content)
+    select(-lat,-long,-addr_full,-content)
 })
 
 msadata_select<-reactive({
@@ -104,8 +118,9 @@ msadata_select<-reactive({
 })
 
 #Create a map  
+  buffer<-0.02
+
 output$map<-renderLeaflet({
-  buffer<-0.03
   long_max<-max(msadata_reactive()$X)+buffer
   latit_max<-max(msadata_reactive()$Y)+buffer
   long_min<-min(msadata_reactive()$X)-buffer
@@ -117,7 +132,6 @@ output$map<-renderLeaflet({
 })
 
 observeEvent(input$msa,{
-  buffer<-0.02
   long_max1<-max(msadata_reactive()$X)+buffer
   latit_max1<-max(msadata_reactive()$Y)+buffer
   long_min1<-min(msadata_reactive()$X)-buffer
@@ -126,8 +140,9 @@ observeEvent(input$msa,{
   leafletProxy("map") %>%
     fitBounds(long_min1,latit_min1,long_max1,latit_max1)})
 
-observeEvent(c(input$storegroup, input$years,input$msa),{ 
- storepal<-colorFactor(palette="YlOrRd",msadata_reactive()$year_range,reverse=TRUE)
+observeEvent(c(input$storegroup, input$years,input$msa, input$loadstores1),{ 
+ #storepal<-colorFactor(palette="YlOrRd",msadata_reactive()$year_range,reverse=TRUE)
+  storepal<-colorFactor(palette="Dark2",msadata_reactive()$store_group,reverse=TRUE)
   
  leafletProxy("map") %>%
     clearMarkers() %>%
@@ -138,21 +153,178 @@ observeEvent(c(input$storegroup, input$years,input$msa),{
                weight=2,
                fillOpacity=0.8,
                radius=4,
-               fillColor=~storepal(year_range),
+               fillColor=~storepal(store_group),
                popup=msadata_select()$content) %>%
    addLegend(data=msadata_reactive(),"topright",pal=storepal,
-             values=~year_range,title="First year in the dataset",
+             values=~store_group,title="Store category",
              opacity=1)
 })
 
-leafletOutput("map")
+leafletOutput("map",height=900)
 
 ```
 
-### About this dataset
+Map by county
+=====================================  
 
-This site maps SNAP autorized retailers from a database of approximately 450,000 total records from 2008 through 2017. These records were obtained through a request to USDA's Benefit Redemptions Division and linked across years by name and address. The full dataset includes all authorized retailers, but this site maps the five largest metropolitan statistical areas (MSAs) in each of the nine census regions. Each MSA is identified by its largest city in the dropdown menu. 
+Column {.sidebar data-width=400}
+-----------------------------------------------------------------------
 
-The number of SNAP retailers increased significantly in the years following the Great Recession, and this website allows users to identify changes in retailer type over time. The control tools allow users to select stores based on when they first appear in the dataset. Stores appearing in 2008 may have been present before this period, and those with a last year of 2017 may still be open, as these are the current start and end points of the data. To see retailers who entered after 2009, for example, a user could move the left slider button to 2009. To see those entering from 2009-2011, the two buttons would be set to those two years. Users also have the ability to filter stores to see just certain types of retailers. These groups are based on USDA's store classifications.
+### Data selection
+
+This application allows you to explore the database of SNAP authorized retailers from 2008-2017 by county. Begin by typing the name of the county in the county selection search box and then select the option you want to view.
+
+Use the tools below to also choose the types of retailers and years to include. Click on a point to see more information on that retailer.
+
+```{r}
+counties<-read_csv("county_list.csv") 
+county_list<-counties$fullname
+
+selectizeInput("county","County selection",
+            choices=counties$fullname,options = list(maxOptions = 8,selectize=TRUE))
+
+actionButton("loaddata2","Load data")
+
+HTML("<br>")
+
+sliderInput("years1", "First year authorized for SNAP", sep="",
+            min = 2008, max = 2017, value = c(2008, 2017))
+
+helpText("We do not have data on retailer authorization before 2008.")
+
+checkboxGroupInput("storegroup1", 
+                    ("Retailer types"), 
+                    choices = list("Supermarkets/supercenters" = "Supermarket", 
+                                   "Groceries" = "Grocer", 
+                                   "Convenience/dollar stores" = "Small retail",
+                                   "Specialty retailers"="Specialty",
+                                   "Local foods"="Local foods"),
+                              selected = c("Supermarket","Grocer", "Small retail","Specialty","Local foods"))
+
+HTML("<br>Download a spreadsheet of these data<br>")
+
+downloadHandler(filename = function() {
+     paste("SNAPretailers_",stcty_fips_label(),"_",Sys.Date(),".csv",sep="")
+   },
+     content = function(file) {
+     write.csv(ctydata_df(), file, row.names = FALSE)
+   }
+)
+
+HTML("<br><br>Data source: USDA Benefits Redemption Division<br>")
+
+downloadButton('downloadData','Download Result Set')
+
+```
+
+Column {data-height=600}
+-----------------------------------------------------------------------
+
+```{r}
+#Load store data from MSA selection
+ctydata_reactive<-reactive({
+  cty_name<-input$county
+  
+  stfips<-counties %>%
+    dplyr::filter(fullname==cty_name) %>%
+    mutate(stfips_sel=paste("G",st_fips,sep="")) %>%
+    select(stfips_sel)
+
+  data<-st_read("storepoints_state.gpkg",layer=stfips$stfips_sel,stringsAsFactors=FALSE) %>%
+    mutate(lat=X,long=Y,
+      addr_full=if_else(is.na(addr_add),
+                         paste("<br><b>",addr_num," ",addr_st," ",sep=""),
+                         paste("<br><b>",addr_num," ",addr_st," ",addr_add,sep="")),
+      year_range=case_when(year_first==year_last~as.character(year_first),
+                           year_first!=year_last~paste(year_first,year_last,sep="-")),
+      content=paste("<strong><size=1>",store_name,"</strong></size>",
+                       addr_full,
+                       "<br>",city,", ",state,"  ",zip5,"</b>",
+                       "<br><br><b>USDA store classification:</b> ",store_type,
+                       "<br><b>Group category: </b>",store_group,
+                       "<br><b>Years authorized for SNAP*: </b>",year_range,
+                       "<br>*2008 and 2017 are the first and last years data are available.",sep=""))
+  data
+  })
+
+#Subset data based on store type and year
+
+#Create downloadable data
+
+ctydata_df<-observeEvent(input$county, {
+  ctydata_df<-ctydata_reactive()
+  st_geometry(ctydata_df)<-NULL
+  ctydata_df %>%
+    select(-lat,-long,-addr_full,-content)
+  })
+
+#Subset data based on county name, store type, and year
+stcty_fips_label<-reactive({counties %>%
+    dplyr::filter(fullname==cty_name) %>%
+    mutate(stcty_fips=paste("G",stcty_fips,sep="")) %>%
+    select(stcty_fips)})
+
+ ctydata_select<-reactive({
+  cty_name<-input$county
+   
+  stcty_fips<-counties %>%
+    dplyr::filter(fullname==cty_name) %>%
+    mutate(stcty_fips=paste("G",stcty_fips,sep="")) %>%
+    select(stcty_fips)
+  
+  ctydata_reactive() %>%
+    filter(cty_fips==stcty_fips$stcty_fips) %>%
+    filter(store_group %in% input$storegroup1) %>%
+    filter(year_first>=input$years1[1]&year_first<=input$years1[2])
+})
+
+#Create a map
+ buffer<-0.02
+
+#Initial view is Autauga County, AL
+output$map1<-renderLeaflet({
+  leaflet() %>%
+   setView(lng=-86.651654,lat=32.543148,zoom=10) %>%
+   addProviderTiles(providers$Esri.WorldGrayCanvas)
+})
+
+observeEvent(input$loaddata2,{
+  long_max<-max(ctydata_select()$X)+buffer
+  latit_max<-max(ctydata_select()$Y)+buffer
+  long_min<-min(ctydata_select()$X)-buffer
+  latit_min<-min(ctydata_select()$Y)-buffer
+
+  leafletProxy("map1") %>%
+    fitBounds(long_min,latit_min,long_max,latit_max)})
+
+observeEvent(c(input$storegroup1, input$years1,input$loaddata2),{
+  storepal<-colorFactor(palette="Dark2",ctydata_reactive()$store_group,reverse=TRUE)
+
+ leafletProxy("map1") %>%
+    clearMarkers() %>%
+    clearControls() %>%
+    addCircleMarkers(data=ctydata_select(),
+               opacity=0.4,
+               color="#603a31",
+               weight=2,
+               fillOpacity=0.8,
+               radius=4,
+               fillColor=~storepal(store_group),
+               popup=ctydata_select()$content) %>%
+   addLegend(data=ctydata_reactive(),"topright",pal=storepal,
+             values=~store_group,title="Store category",
+             opacity=1)
+})
+
+ leafletOutput("map1",height=900)
+
+```
+
+About this map
+=====================================
+
+This map shows SNAP autorized retailers from a database of approximately 450,000 total records from 2008 through 2017. These records were obtained through a request to USDA's Benefit Redemptions Division and linked across years by name and address. The full dataset includes all authorized retailers, but this site maps the five largest metropolitan statistical areas (MSAs) in each of the nine census regions and each county in the US. Each MSA is identified by its largest city in the dropdown menu. 
+
+The number of SNAP retailers increased significantly in the years following the Great Recession. The control tools allow users to select stores based on when they first appear in the dataset. Stores appearing in 2008 may have been present before this period, and those with a last year of 2017 may still be open, as these are the current start and end points of the data. To see retailers who entered after 2009, for example, a user could move the left slider button to 2009. To see those entering from 2009-2011, the two buttons would be set to those two years. Users also have the ability to filter stores to see just certain types of retailers. These groups are based on USDA's store classifications. The exact USDA classifications are available in the store popup windows and the downloadable spreadsheet.
 
 Users can download store data for any city using the button provided here. The full dataset is available on the [project website](https://github.com/jshannon75/snap_retailers_2008_2017). A fuller description of the dataset is also available in [this summary document](https://jshannon75.github.io/snap_retailers_2008_2017/overview_paper).
