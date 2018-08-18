@@ -1,5 +1,7 @@
 library(tidyverse)
 library(ggmap)
+library(sf)
+library(tmaptools)
 
 #This script reviews ESRI geocoded addresses and uses the Google API to geocode ones with poor precision.
 
@@ -174,3 +176,33 @@ snap_geocode_usda<-anti_join(snap_all2,snap_geocode_id) %>%
 snap_all_comb<-bind_rows(snap_geocode_all,snap_geocode_usda)
 
 write_csv(snap_all_comb,"data/snap_retailers_natl_2018_06_11.csv")
+
+
+#Identify problem geocodes--where location doesn't match state
+#This is from a master list like the one on l. 178
+snap_all_comb<-read_csv("analysis_NO_UPLOAD/data/storepoints_all.csv")
+
+states<-snap_all_comb %>% 
+  select(state,st_fips) %>% 
+  group_by(state) %>% 
+  count(st_fips) %>%
+  filter(n<20) %>%
+  select(-n)
+
+store_problems<-states %>% 
+  left_join(snap_all_comb) %>%
+  mutate(cityadd=paste(city,", ",state,sep=""))
+
+store_problems1<-store_problems %>%
+  mutate_geocode(cityadd,output="more") 
+
+store_problems2<-store_problems1 %>%
+  mutate(X=lon,Y=lat,
+         method="google",
+         match=loctype) %>%
+  select(state:dup,-st_fips) %>%
+  rename("store_name"=`5`)
+
+store_problems_inspect<-store_problems1 %>%
+  select(state,administrative_area_level_1) %>%
+  mutate(X=)
