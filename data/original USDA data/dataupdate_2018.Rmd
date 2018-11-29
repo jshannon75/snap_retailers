@@ -1,0 +1,69 @@
+---
+title: 'SNAP Retailers: Data update November 2018'
+author: "Jerry Shannon"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+getwd()
+library(tidyverse)
+```
+
+## Loading data
+
+We first load the original dataset, compiled in mid 2018. Then we will load data for retailers authorized for SNAP on June 30, 2018.
+
+```{r loadfiles, message=FALSE}
+stype_crosswalk<-read_csv("data/original USDA data/stype_crosswalk.csv")
+
+st_data<-read_csv("data/snap_retailers_usda.csv") %>%
+  left_join(stype_crosswalk) %>% 
+  mutate(addr_num=as.character(addr_num))
+
+june2018<-read_csv("data/original USDA data/SNAP Authorized Stores June 2018.csv") %>%
+  select(st_type,store_name,addr_st,city,state) %>%
+  mutate(Y2018=1) 
+june18id<-data.frame(1:nrow(june2018))
+names(june18id)<-"june18id"
+june2018<-bind_cols(june2018,june18id) %>%
+  left_join(stype_crosswalk)
+```
+
+## Dealing with duplicates
+
+The original dataset had a handful (~2,000) of duplicates. This happened when a store changed classification during the study period, a suite number was added, or when the lat/long coordinates changed slightly. We will correct for this by taking the maximum lat and long coordinates and the suite id. For now, we are leaving the duplicates for store identifier in, as there's no overlap in years.
+
+```{r}
+st_data_latlong<-st_data %>%
+  group_by(storeid) %>%
+  mutate(X=max(X),
+         Y=max(Y),
+         addr_add=first(addr_add)) %>%
+  distinct()
+```
+
+## Adding 2018 data
+
+We can now try to match a store ID to the 2018 records based on the store name, street name, city, and state.
+
+```{r}
+st_data_join<-st_data_latlong %>%
+  select(store_name,storeid,addr_st,city,state) 
+
+june2018_stid<-june2018%>%
+  left_join(st_data_join)
+```
+
+Let's look at the stores that didn't match. There's a range of store types, so we should check to see what's causing the mismatch.
+
+```{r}
+store_data_aj<-june2018_stid %>%
+  filter(is.na(storeid)==TRUE)
+
+table(store_data_aj$store_type)
+```
+
+When this is done, we can join the 2018 list back to the main list by store id (or using bind_rows for new stores).
+
+
