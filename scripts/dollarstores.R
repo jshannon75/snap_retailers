@@ -6,7 +6,8 @@ library(tmap)
 stores<-read_csv("data/snap_retailers_usda.csv")
 
 counties<-st_read("data/uscounties_simplify.gpkg") %>%
-  filter(State %in% c("North Dakota","South Dakota","Nebraska","Iowa","Minnesota","Wisconsin","Illinois")) %>%
+  filter(State %in% c("Louisiana","Arkansas","Kentucky","Tennessee","Alabama",
+                      "Mississippi","Alabama","Georgia","Florida","North Carolina","South Carolina")) %>%
   st_transform(102003)
 
 states<-counties %>%
@@ -27,7 +28,7 @@ dollars<-stores %>%
 #write_csv(dollars,"data/dollars_all_long.csv")
 
 dollars_st<-dollars %>%
-  filter(state %in% c("ND","SD","NE","IA","MN","WI","IL"))
+  filter(state %in% c("LA","AR","KY","TN","AL","MS","GA","FL","NC","SC"))
   #filter(state!="HI" & state!="AK" & X<0)
   
 dollars_sf<-st_as_sf(dollars_st,coords=c("X","Y"),crs=4326,remove=FALSE) %>%
@@ -35,8 +36,8 @@ dollars_sf<-st_as_sf(dollars_st,coords=c("X","Y"),crs=4326,remove=FALSE) %>%
 
 anim<-tm_shape(counties)+
   tm_borders(col="grey",alpha=0.3)+
-tm_shape(states)+
-  tm_borders(alpha=0.9,lwd=1.2)+
+#tm_shape(states)+
+#  tm_borders(alpha=0.9,lwd=1.2)+
 tm_shape(dollars_sf)+
   tm_dots(size=0.04,
           alpha=0.6,
@@ -45,7 +46,7 @@ tm_shape(dollars_sf)+
   tm_layout(legend.outside=TRUE,legend.title.size=0.1)+
   tm_facets(along="year_num", free.coords=FALSE)
 tmap_animation(anim, 
-               filename = "dollgen_mw_animation.gif",
+               filename = "dollgen_se_animation.gif",
                width = 1500, height = 900, delay = 150)
 
 #Old approach with gganimate
