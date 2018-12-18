@@ -15,3 +15,9 @@ Multiple files are available on this site:
 * The data folder of this repo contains the original files provided by USDA, which show store listings for June 30 from 2008-2018. 
 
 R scripts showing the data consolidation and editing process are also available in the home directory of the repo.
+
+## Version history/notes
+
+* 12/18/2018: A small correction was made for the MSA id on some stores (< 5,000). 
+* 12/14/2018: Data on dollar stores nationally was added to the data folder, and a script for visualizing these across years is now in the scripts folder.
+* 12/12/2018: Data on SNAP retailers from June 30, 2018 was joined to the existing dataset. Location IDs were also added for unique addresses, and some duplicates in the earlier dataset were combined.
