@@ -27,7 +27,7 @@ stores_count<-stores %>%
 stores_dup<-stores_count %>%
   filter(addr_count > 1) %>%
   mutate(name_lower=tolower(store_name),
-         name_punc=str_squish(trimws(gsub("[[:punct:]]", " ", name_lower)))) %>%
+         name_punc=str_squish(trimws(gsub("[[:punct:]]", "", name_lower)))) %>%
   select(-name_lower) %>%
   group_by(addr_id,store_type) %>%
   group_split()
