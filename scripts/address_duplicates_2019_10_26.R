@@ -7,7 +7,7 @@ stores<-read_csv("data/snap_retailers_usda.csv")
 #Identify duplicates and remove capitalization/punctuation
 addr_dup<-stores %>%
   mutate(addr_num_na=if_else(is.na(addr_num)==TRUE,"0",addr_num),
-    addr_full=paste(addr_num_na,addr_st,sep="")) %>%
+    addr_full=paste(substr(addr_num_na,1,2),addr_st,sep="")) %>%
   mutate(addr_lower=tolower(addr_full),
          addr_punc=substr(str_squish(trimws(gsub("[[:punct:]]", "", addr_lower))),1,14),
          name_lower=tolower(store_name),
@@ -57,6 +57,7 @@ stores_combine<-stores_ngram %>%
             Y2016=max(Y2016),
             Y2017=max(Y2017),
             Y2018=max(Y2018),
+            Y2019=max(Y2019),
             X=first(X),
             Y=first(Y),
             method=first(method)) 
