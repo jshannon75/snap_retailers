@@ -3,16 +3,7 @@ library(sf)
 library(gganimate)
 library(tmap)
 
-stores<-read_csv("data/snap_retailers_usda.csv")
-
-counties<-st_read("data/uscounties_simplify.gpkg") %>%
-  filter(State %in% c("Louisiana","Arkansas","Kentucky","Tennessee","Alabama",
-                      "Mississippi","Alabama","Georgia","Florida","North Carolina","South Carolina")) %>%
-  st_transform(102003)
-
-states<-counties %>%
-  group_by(State) %>%
-  summarise()
+stores<-st_read("analysis_NO_UPLOAD/data/snap_retailers_full.gpkg")
 
 dollars<-stores %>%
   mutate(store_name_l=tolower(store_name),
@@ -20,12 +11,17 @@ dollars<-stores %>%
                          grepl("dollar tree",store_name_l,fixed=TRUE)~"Dollar Tree",
                          grepl("dollar general",store_name_l,fixed=TRUE)~"Dollar General")) %>%
   filter(is.na(store)==FALSE) %>%
-  gather(Y2008:Y2018,key="year",value="pres") %>%
+  gather(Y2008:Y2019,key="year",value="pres") %>%
   mutate(year_num=as.numeric(substr(year,2,5)),
          time=paste(year_num,"-06-01",sep="")) %>%
   filter(pres==1)
 
-#write_csv(dollars,"data/dollars_all_long.csv")
+
+dollars_wide<-dollars %>% 
+  select(-time,-year_num) %>%
+  spread(year,pres,fill=0)
+st_write(dollars_wide,"data/dollars_all.gpkg")
+write_csv(dollars %>% st_set_geometry(NULL),"data/dollars_all_long.csv")
 
 dollars_st<-dollars %>%
   filter(state %in% c("LA","AR","KY","TN","AL","MS","GA","FL","NC","SC"))
