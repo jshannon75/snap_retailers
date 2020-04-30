@@ -12,7 +12,10 @@ Multiple files are available on this site:
 * An additional file with the state, county, census tracts, and metropolitan statistical areas of each store [is avilable here](https://github.com/jshannon75/snap_retailers/raw/master/data/snap_retailers_crosswalk.csv) and can be joined with the store id code. Right click and choose "Save link as" to download. 
 
 * Metadata showing variable names are available [on this spreadsheet](https://github.com/jshannon75/snap_retailers/raw/master/data/snap_retailers_metadata.csv). 
-* The data folder of this repo contains the original files provided by USDA, which show store listings for June 30 from 2008-2018. 
+
+* The data folder of this repo contains the original files provided by USDA, which show store listings for June 30 from 2008-2019. 
+
+* A research project specifically on dollar stores used [this CSV file](https://github.com/jshannon75/snap_retailers/raw/master/data/dollars_all.csv), also available in the data folder. This file includes all SNAP-authorized locations for Dollar General, Dollar Tree, and Family Dollar, along with geographic coordinates, years of operation, and geographic identifiers (county, state, metro area).
 
 R scripts showing the data consolidation and editing process are also available in the home directory of the repo.
 

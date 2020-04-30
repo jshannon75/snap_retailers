@@ -9,7 +9,7 @@ stores_raw<-read_csv("data/snap_retailers_usda.csv")
 stores<-read_csv("data/snap_retailers_crosswalk.csv") %>%
   left_join(stores_raw)
 
-chain_name<-"Trader Joe's"
+chain_name<-"Wawa"
 chain<-stores %>%
   mutate(store1=tolower(store_name)) %>%
   filter(grepl(tolower(chain_name),store1)) 
@@ -44,7 +44,7 @@ states<-get_acs(geography="state",variable="B01001_001",year=2017,
 
 #yr=2019
 cty_breaks<-cty_map %>% filter(year=="Y2019") %>% select(density)
-jbreaks<-getJenksBreaks(cty_breaks$density,7)
+jbreaks<-getJenksBreaks(cty_breaks$density,6)
 tmap_chain<-function(yr){
   maptitle<-paste("Density of ",chain_name," retailers, ",yr,sep="")
   filetitle<-paste("analysis_NO_UPLOAD/graphics/",gsub(" ","",chain_name),"map_",yr,".png",sep="")
