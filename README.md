@@ -1,5 +1,5 @@
-# National database of SNAP authorized retailers, 2008-2018
-This repository stores data on SNAP authorized retailers nationally from 2008-2018. Data are from the USDA, with records linked across years and all stores geocoded. 
+# National database of SNAP authorized retailers, 2008-2020
+This repository stores data on SNAP authorized retailers nationally from 2008-2020. Data are from the USDA, with records linked across years and all stores geocoded. 
 
 A research rationale for these data, details on its construction, and a short descriptive analysis are [available here](https://jshannon75.github.io/snap_retailers/overview_paper).
 
