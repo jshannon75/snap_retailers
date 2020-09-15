@@ -23,6 +23,10 @@ library(rgdal)
 msa5<-read_csv("msa5_ranks_2018_07_25.csv") %>%
   arrange(msa_short)
 
+dollars<-st_read("dollars_all.gpkg",stringsAsFactors=FALSE)
+regions<-unique(dollars$Region)
+chains<-unique(dollars$store)
+
 years<-c(2008,2009,2010,2011,2012,2013,2014,2015,2016,2017)
 
 ```
@@ -82,7 +86,6 @@ downloadHandler(filename = function() {
 )
 
 HTML("<br>Data source: USDA Benefits Redemption Division<br>")
-
 
 ```
 
@@ -374,6 +377,121 @@ observeEvent(c(input$storegroup1, input$years2_1,input$loaddata2),{
  leafletOutput("map1",height=900)
 
 ```
+
+Dollar stores by region
+=====================================  
+
+Column {.sidebar data-width=400}
+-----------------------------------------------------------------------
+
+### Data selection
+
+This map allows you to view SNAP authorized retailers from 2008-2017 by county. Type the name of the county in the county selection search box and then select the option you want. Then click on the load data button.
+
+Use the tools below to also choose the types of retailers and years to include. Click on a point to see more information on that retailer.
+
+```{r}
+years_doll<-c(2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019)
+
+selectizeInput("region","Region selection",
+            choices=regions,
+            options = list(maxOptions = 4,selectize=TRUE),
+            select="Midwest Region")
+
+actionButton("loaddata3","Load data")
+
+HTML("<br>")
+
+selectInput(
+  inputId = "years2_2", 
+  label = "Select the year(s) retailers were SNAP authorized", 
+  choices = years_doll, 
+  selected=max(years_doll)
+)
+
+checkboxGroupInput("storegroup2", 
+                    ("Store chain"), 
+                    choices = chains,
+                              selected = chains)
+
+HTML("<br><br>Data source: USDA Benefits Redemption Division<br>")
+
+```
+
+Column {data-height=600}
+-----------------------------------------------------------------------
+
+```{r}
+#Load store data from MSA selection
+regdata_reactive<-reactive({
+  reg_name<-input$region
+
+  data<-dollars %>%
+    mutate(lat=X,long=Y,
+      addr_full=if_else(is.na(addr_add),
+                         paste("<br><b>",addr_num," ",addr_st," ",sep=""),
+                         paste("<br><b>",addr_num," ",addr_st," ",addr_add,sep="")),
+      year_range=case_when(year_first==year_last~as.character(year_first),
+                           year_first!=year_last~paste(year_first,year_last,sep="-")),
+      content=paste("<strong><size=1>",store_name,"</strong></size>",
+                       addr_full,
+                       "<br>",city,", ",state,"  ",zip5,"</b>",
+                       "<br><br><b>USDA store classification:</b> ",store_type,sep="")) %>%
+    filter(year_first <= input$years2_2 & year_last <= years2_2)
+  data
+  })
+
+#Subset data based on county name, store type, and year
+
+#Create a map
+ buffer<-0.02
+
+#Initial view is Autauga County, AL
+output$map2<-renderLeaflet({
+  leaflet() %>%
+   setView(lng=-86.651654,lat=32.543148,zoom=10) %>%
+   addTiles(urlTemplate="https://api.mapbox.com/styles/v1/shann039/cjdyoczre1lt02rmw9rhw2vps/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2hhbm4wMzkiLCJhIjoiY2prenRsMXl1MHh2czNxbnNmN3R0MGI0aSJ9.wPnB1BQ_AjhruRrlXJ6tiA")
+   #addProviderTiles(providers$CartoDB.Positron) 
+})
+
+observeEvent(input$loaddata3,{
+  long_max<-max(regdata_reactive()$X)+buffer
+  latit_max<-max(regdata_reactive()$Y)+buffer
+  long_min<-min(regdata_reactive()$X)-buffer
+  latit_min<-min(regdata_reactive()$Y)-buffer
+
+  leafletProxy("map2") %>%
+    fitBounds(long_min,latit_min,long_max,latit_max)})
+
+observeEvent(c(input$storegroup1, input$loaddata3),{
+  storepal<-colorFactor(palette="Dark2",ctydata_reactive()$store_group,reverse=TRUE)
+
+ leafletProxy("map2") %>%
+    clearMarkers() %>%
+    clearControls() %>%
+    # addPolygons(data=cty_boundary(),
+    #             fillOpacity=0,
+    #             opacity=0.7,
+    #             stroke=TRUE,
+    #             color="black") %>%
+    addCircleMarkers(data=regdata_reactive(),
+               opacity=0.4,
+               color="#603a31",
+               weight=2,
+               fillOpacity=0.8,
+               radius=4,
+               fillColor=~storepal(store_group),
+               popup=regdata_reactive()$content) %>%
+   addLegend(data=regdata_reactive(),"topright",pal=storepal,
+             values=~store_group,title="Store category",
+             opacity=1)
+})
+
+ leafletOutput("map2",height=900)
+
+```
+
+
 
 About this map
 =====================================
