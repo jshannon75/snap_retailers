@@ -5,30 +5,26 @@ library(sf)
 #Read in data ####
 stores_raw<-read_csv("data/snap_retailers_usda.csv")
 
-#Get rid of duplicates in match field (2019)
-matches<-stores_raw %>%
-  filter(is.na(match)==TRUE | match %in% c("PointAddress","StreetAddress","rooftop","geometric_center","range_interpolated",
-                                           "Postal","StreetInt"))
+#Identify stores without a match
+stores_raw<-read_csv("data/snap_retailers_usda.csv")
 
-nonmatch<-stores_raw %>% 
-  anti_join(matches) %>%
-  filter(!store_id %in% matches$store_id) %>%
-  mutate(match="")
+cw_old<-read_csv("data/snap_retailers_crosswalk.csv")
+stores_match<-stores_raw %>%
+  inner_join(cw_old)
 
-stores_raw<-bind_rows(matches,nonmatch)
-write_csv(stores_raw,"data/snap_retailers_usda.csv")
+stores_nomatch<-stores_raw %>%
+  anti_join(cw_old)
 
-stores_raw_sf<-st_as_sf(stores_raw,coords=c("X","Y"),crs=4326)
+stores_nomatch_sf<-st_as_sf(stores_nomatch,coords=c("X","Y"),crs=4326)
 
-##In future years, speed things up by just selecting those areas 
-##without an existing crosswalk match
-
-tracts<-st_read("analysis_NO_UPLOAD/data/nhgis_boundaries/nhgis0101_shapefile_tl2017_us_tract_2017/US_tract_2017.shp") %>%
+#Load geospatial data
+tracts<-st_read("analysis_NO_UPLOAD/data/nhgis_boundaries/nhgis0101_shapefile_tl2017_us_tract_2017/US_tracts_2017.shp") %>%
   select(STATEFP,COUNTYFP,GEOID,GISJOIN) %>%
   mutate("cty_fips"=paste(STATEFP,COUNTYFP,sep="")) %>%
   rename("st_fips"=STATEFP,
          "tract_fips"=GEOID,
          "gisjn_tct"=GISJOIN) %>%
+  select(-COUNTYFP) %>%
   st_transform(4326)
 pumas<-st_read("analysis_NO_UPLOAD/data/nhgis_boundaries/nhgis0102_shapefile_tl2017_us_puma_2017/US_puma_2017.shp") %>%
   st_transform(4326) %>%
@@ -50,7 +46,7 @@ cbsa<-st_read("analysis_NO_UPLOAD/data/nhgis_boundaries/nhgis0101_shapefile_tl20
          msa_class=LSAD,
          gisjn_msa=GISJOIN)
     
-stores_id1<-stores_raw_sf %>%
+stores_id1<-stores_nomatch_sf %>%
   ungroup() %>%
   select(store_id) %>%
   st_join(tracts,join=st_within) %>%
@@ -60,11 +56,13 @@ stores_id2<-stores_id1 %>%
   st_join(pumas,join=st_within) 
 
 stores_id_csv<-stores_id2 %>%
+  mutate(msa_fips=as.numeric(msa_fips)) %>%
   st_set_geometry(NULL) %>%
-  distinct()
+  bind_rows(cw_old)
 
-stores_id3<-stores_raw_sf %>% 
-  left_join(stores_id_csv) 
+stores_id3<-stores_raw %>%
+  st_as_sf(coords=c("X","Y"),crs=4326,remove=FALSE) %>%
+  inner_join(stores_id_csv) 
 
 write_csv(stores_id_csv,"data/snap_retailers_crosswalk.csv")
 st_write(stores_id3,"analysis_NO_UPLOAD/data/snap_retailers_full.gpkg")

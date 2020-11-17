@@ -21,6 +21,7 @@ R scripts showing the data consolidation and editing process are also available 
 
 ## Version history/notes
 
+* 11/17/2020: Data for January and June 2020 were added to the dataset
 * 10/28/2019: 2019 Retailers were added to the dataset. These are stores authorized on June 30, 2019. Most were matched to existing records using exact or fuzzy matching. See the 2019 update script for the exact procedure.
 * 10/27/2019: An additional ~10,000 retailers were combined based on fuzzy matching on address. 
 * 10/19/2019: About 15,000 duplicate retailers were identified and removed. See the "duplicate_reduction" script for that date for more detail.
