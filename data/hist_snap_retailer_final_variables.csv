@@ -1,0 +1,33 @@
+Variables,,,,,,,,,,,Store category crosswalk,,,,
+record_id,USDA rec ord ID,,,,,,,,,,st_type,store_type,stype_num,store_group,stgrp_num
+store_name,Listed retailer name,,,,,,,,,,BB,Bakery Specialty,1,Specialty,5
+store_type,USDA retailer classification,,,,,,,,,,CO,Combination Grocery/Other,2,Small retail,4
+store_group,Derived retailer categories (see the crosswalk table),,,,,,,,,,CS,Convenience Store,3,Small retail,4
+street_num,Street number of the retailer,,,,,,,,,,DR,Delivery Route,4,Other store,3
+street_name,Street name of the retailer,,,,,,,,,,DF,Direct Marketing Farmer,5,Local foods,2
+address_add,"Additional address information (suite #, etc.)",,,,,,,,,,FM,Farmers' Market,6,Local foods,2
+city,City,,,,,,,,,,FV,Fruits/Veg Specialty,7,Specialty,5
+state,State,,,,,,,,,,LG,Large Grocery Store,8,Grocer,1
+zip,Zipcode,,,,,,,,,,ME,Meat/Poultry Specialty,9,Specialty,5
+zip4,Zip +4,,,,,,,,,,MG,Medium Grocery Store,10,Grocer,1
+auth_date,Authorization date,,,,,,,,,,MC,Military Commissary,11,Other store,3
+auth_year,Year of authorization (from date),,,,,,,,,,BC,Non-profit Food Buying Co-op,12,Local foods,2
+end_date,"End of authorization, if applicable",,,,,,,,,,SE,Seafood Specialty,13,Specialty,5
+end_year,Year authorization ended (from date),,,,,,,,,,SG,Small Grocery Store,14,Grocer,1
+x,Longitude,,,,,,,,,,SS,Super Store,15,Supermarket,6
+y,Latitude,,,,,,,,,,SM,Supermarket,16,Supermarket,6
+county,U.S. County,,,,,,,,,,WH,Wholesaler,17,Supermarket,6
+cty_fips,U.S. County FIPS code,,,,,,,,,,,,,,
+tract_fips,U.S. Census tract FIPS code,,,,,,,,,,,,,,
+gisjn_tct,NHGIS GISJOIN version of the tract FIPS code,,,,,,,,,,,,,,
+st_fips,U.S. State FIPS code,,,,,,,,,,,,,,
+place_fips,Census Place FIPS code,,,,,,,,,,,,,,
+place_name,Census Place name,,,,,,,,,,,,,,
+gisjn_plc,NHGIS GISJOIN version of the place FIPS code,,,,,,,,,,,,,,
+msa_fips,Metropolitan Statistical Area (2019) FIPS code,,,,,,,,,,,,,,
+msa_name,Metropolitan Statistical Area (2019) name,,,,,,,,,,,,,,
+msaclass_name,Metropolitan Statisitical Area name and type (Metro/Micro),,,,,,,,,,,,,,
+msa_class,"Metropolitan Statisitical Area type--M1 is Metro (larger population), M2 is Micro",,,,,,,,,,,,,,
+gisjn_msa,NHGIS GISJOIN version of the MSA FIPS code,,,,,,,,,,,,,,
+puma_fips,U.S. PUMA FIPS code,,,,,,,,,,,,,,
+gisjn_puma,NHGIS GISJOIN version of the PUMA FIPS code,,,,,,,,,,,,,,

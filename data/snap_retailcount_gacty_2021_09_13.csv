@@ -1,0 +1,49 @@
+Ext_Dist,urb_class,store_group,Y2005,Y2010,Y2015,Y2020
+NE,Metro,Local foods,1,6,23,12
+NE,Metro,Small retail,234,523,812,777
+NE,Metro,Supermarket,100,133,146,143
+NE,Metro,Dollar store,0,51,58,71
+NE,"Non-metro, population of <20K",Small retail,76,206,335,342
+NE,"Non-metro, population of <20K",Supermarket,49,51,49,46
+NE,"Non-metro, population of <20K",Dollar store,0,21,21,23
+NE,"Non-metro, population of <20K",Local foods,0,2,20,2
+NE,"Non-metro, population of >20K",Small retail,23,71,100,101
+NE,"Non-metro, population of >20K",Supermarket,8,12,12,14
+NE,"Non-metro, population of >20K",Dollar store,0,5,7,8
+NE,"Non-metro, population of >20K",Local foods,0,0,5,1
+NW,Metro,Dollar store,1,210,318,354
+NW,Metro,Local foods,4,26,92,51
+NW,Metro,Small retail,901,2344,3304,3141
+NW,Metro,Supermarket,519,723,713,775
+NW,"Non-metro, population of <20K",Local foods,1,1,1,0
+NW,"Non-metro, population of <20K",Small retail,17,53,77,62
+NW,"Non-metro, population of <20K",Supermarket,7,6,5,6
+NW,"Non-metro, population of <20K",Dollar store,0,3,4,4
+NW,"Non-metro, population of >20K",Small retail,52,122,177,160
+NW,"Non-metro, population of >20K",Supermarket,20,22,24,26
+NW,"Non-metro, population of >20K",Dollar store,0,9,9,10
+NW,"Non-metro, population of >20K",Local foods,0,2,8,3
+SE,Metro,Small retail,143,284,439,472
+SE,Metro,Supermarket,56,72,72,76
+SE,Metro,Dollar store,0,23,40,44
+SE,Metro,Local foods,0,2,12,6
+SE,"Non-metro, population of <20K",Small retail,208,418,446,443
+SE,"Non-metro, population of <20K",Supermarket,51,54,55,59
+SE,"Non-metro, population of <20K",Dollar store,0,29,35,35
+SE,"Non-metro, population of <20K",Local foods,0,2,17,5
+SE,"Non-metro, population of >20K",Local foods,1,3,5,7
+SE,"Non-metro, population of >20K",Small retail,95,184,206,218
+SE,"Non-metro, population of >20K",Supermarket,25,25,27,24
+SE,"Non-metro, population of >20K",Dollar store,0,10,13,14
+SW,Metro,Small retail,180,329,447,435
+SW,Metro,Supermarket,52,63,62,68
+SW,Metro,Dollar store,0,28,36,40
+SW,Metro,Local foods,0,2,24,3
+SW,"Non-metro, population of <20K",Local foods,1,2,28,11
+SW,"Non-metro, population of <20K",Small retail,164,335,394,357
+SW,"Non-metro, population of <20K",Supermarket,44,49,49,46
+SW,"Non-metro, population of <20K",Dollar store,0,21,30,30
+SW,"Non-metro, population of >20K",Local foods,1,1,3,2
+SW,"Non-metro, population of >20K",Small retail,41,91,110,111
+SW,"Non-metro, population of >20K",Supermarket,12,13,13,11
+SW,"Non-metro, population of >20K",Dollar store,0,6,7,6

@@ -1,24 +1,26 @@
 #This script adds county, tract, PUMA, MSA, and city IDs to the SNAP store data.
 library(tidyverse)
 library(sf)
+library(lubridate)
+library(furrr)
+future::plan(multicore)
 
 #Read in data ####
-stores_raw<-read_csv("data/snap_retailers_usda.csv")
+stores_raw1<-read_csv("data/Historical SNAP Retailer Locator Data as of 20201231_geocode.csv")
 
-#Identify stores without a match
-stores_raw<-read_csv("data/snap_retailers_usda.csv")
+#fix xy swap
+stores_xyswap<-stores_raw1 %>%
+  filter(x>0 & y<0) %>%
+  mutate(x1=y,y1=x) %>%
+  select(-x,-y) %>%
+  rename(x=x1,y=y1)
 
-cw_old<-read_csv("data/snap_retailers_crosswalk.csv")
-stores_match<-stores_raw %>%
-  inner_join(cw_old)
-
-stores_nomatch<-stores_raw %>%
-  anti_join(cw_old)
-
-stores_nomatch_sf<-st_as_sf(stores_nomatch,coords=c("X","Y"),crs=4326)
+stores_raw<-stores_raw1 %>%
+  anti_join(stores_xyswap,by=c("record_id","store_name","address_add","auth_date")) %>%
+  bind_rows(stores_xyswap)
 
 #Load geospatial data
-tracts<-st_read("analysis_NO_UPLOAD/data/nhgis_boundaries/nhgis0101_shapefile_tl2017_us_tract_2017/US_tracts_2017.shp") %>%
+tracts<-st_read("D:/Dropbox/Jschool/GIS data/Census/NHGIS/2020 tracts pumas msa place/US_tract_2020.gpkg") %>%
   select(STATEFP,COUNTYFP,GEOID,GISJOIN) %>%
   mutate("cty_fips"=paste(STATEFP,COUNTYFP,sep="")) %>%
   rename("st_fips"=STATEFP,
@@ -26,18 +28,18 @@ tracts<-st_read("analysis_NO_UPLOAD/data/nhgis_boundaries/nhgis0101_shapefile_tl
          "gisjn_tct"=GISJOIN) %>%
   select(-COUNTYFP) %>%
   st_transform(4326)
-pumas<-st_read("analysis_NO_UPLOAD/data/nhgis_boundaries/nhgis0102_shapefile_tl2017_us_puma_2017/US_puma_2017.shp") %>%
+pumas<-st_read("D:/Dropbox/Jschool/GIS data/Census/NHGIS/2020 tracts pumas msa place/US_puma_2020.gpkg") %>%
   st_transform(4326) %>%
   select(GEOID10,GISJOIN) %>%
   rename("puma_fips"=GEOID10,"gisjn_puma"=GISJOIN) %>%
   st_buffer(0)
-places<-st_read("analysis_NO_UPLOAD/data/nhgis_boundaries/nhgis0101_shapefile_tl2017_us_place_2017/US_place_2017.shp") %>%
+places<-st_read("D:/Dropbox/Jschool/GIS data/Census/NHGIS/2020 tracts pumas msa place/US_place_2020.gpkg") %>%
   st_transform(4326) %>%
   select("GEOID","NAMELSAD","GISJOIN") %>%
   rename("place_fips"=GEOID,
          "place_name"=NAMELSAD,
          "gisjn_plc"=GISJOIN)
-cbsa<-st_read("analysis_NO_UPLOAD/data/nhgis_boundaries/nhgis0101_shapefile_tl2017_us_cbsa_2017/US_cbsa_2017.shp") %>%
+cbsa<-st_read("D:/Dropbox/Jschool/GIS data/Census/NHGIS/2020 tracts pumas msa place/US_cbsa_2020.gpkg") %>%
   st_transform(4326) %>%
   select(GEOID,NAME,NAMELSAD,LSAD,GISJOIN) %>%
   rename(msa_fips=GEOID,
@@ -46,23 +48,83 @@ cbsa<-st_read("analysis_NO_UPLOAD/data/nhgis_boundaries/nhgis0101_shapefile_tl20
          msa_class=LSAD,
          gisjn_msa=GISJOIN)
     
-stores_id1<-stores_nomatch_sf %>%
-  ungroup() %>%
-  select(store_id) %>%
+pumajoin_all_sf<-stores_raw %>%
+  distinct(record_id,x,y) %>%
+  mutate(row_id=row_number()) %>%
+  st_as_sf(coords=c("x","y"),crs=4326) %>%
   st_join(tracts,join=st_within) %>%
   st_join(places,join=st_within) %>%
-  st_join(cbsa,join=st_within) 
-stores_id2<-stores_id1 %>%
-  st_join(pumas,join=st_within) 
+  st_join(cbsa,join=st_within) %>%
+  left_join(stores_raw)
 
-stores_id_csv<-stores_id2 %>%
-  mutate(msa_fips=as.numeric(msa_fips)) %>%
-  st_set_geometry(NULL) %>%
-  bind_rows(cw_old)
+st_write(pumajoin_all_sf,"data/hist_snap_retailer1.gpkg",delete_dsn = TRUE)
 
-stores_id3<-stores_raw %>%
-  st_as_sf(coords=c("X","Y"),crs=4326,remove=FALSE) %>%
-  inner_join(stores_id_csv) 
+#Puma join in qgis and reduce duplicates
 
-write_csv(stores_id_csv,"data/snap_retailers_crosswalk.csv")
-st_write(stores_id3,"analysis_NO_UPLOAD/data/snap_retailers_full.gpkg")
+pumajoin<-st_read("data/hist_snap_retailer.gpkg")%>%
+  st_set_geometry(NULL)
+otherjoin<-st_read("data/hist_snap_retailer1.gpkg")%>%
+  st_set_geometry(NULL)
+
+puma_reduce<-function(df){
+  pumajoin %>%
+    group_by(record_id,x,y) %>%
+    summarise(puma_fips=first(puma_fips),
+            gisjn_puma=first(gisjn_puma))
+}
+
+options(future.globals.maxSize = 1000000000)
+pumajoin1<-future_map(pumajoin,puma_reduce)
+
+pumajoin2<-data.frame(pumajoin1) %>%
+  select(puma_fips.record_id,puma_fips.puma_fips,puma_fips.gisjn_puma) %>%
+  distinct()
+names(pumajoin2)<-c("record_id","puma_fips","gisjn_puma") 
+
+pumajoin_all <-otherjoin %>%
+  left_join(pumajoin2) %>%
+  mutate(auth_year=year(mdy(auth_date)),
+         end_year=year(mdy(end_date)))%>%
+  select(record_id,store_name:zip4,auth_date,auth_year,end_date,end_year,x,y,county,cty_fips,tract_fips,gisjn_tct,
+         st_fips,place_fips:gisjn_msa,puma_fips,gisjn_puma) 
+
+pumajoin_all_sf<-pumajoin_all %>% 
+  st_as_sf(coords=c("x","y"),crs=4326,remove=FALSE)
+
+write_csv(pumajoin_all,"data/hist_snap_retailer_final.csv",na="")
+st_write(pumajoin_all_sf %>% st_as_sf(coords=c("x","y"),crs=4326,remove=FALSE),
+         "data/hist_snap_retailer_final.gpkg",delete_dsn=TRUE)
+
+#DG analysis
+
+#pumajoin_all_sf<-st_read("data/hist_snap_retailer_final.gpkg")
+dg<-pumajoin_all_sf %>%
+  filter(str_detect(tolower(store_name),"dollar general")) %>%
+  mutate(auth_date1=year(mdy(auth_date)))
+st_write(dg,"data/dg.gpkg",delete_dsn = TRUE)
+
+walmart<-pumajoin_all_sf %>%
+  filter(str_detect(tolower(store_name),"walmart")) %>%
+  mutate(auth_date1=year(mdy(auth_date)))
+st_write(walmart,"data/walmart.gpkg",delete_dsn = TRUE)
+
+hist(dg$auth_date1)
+
+supers<-pumajoin_all_sf %>%
+  filter(store_group=="Supermarket")%>%
+  mutate(auth_date1=year(mdy(auth_date)))
+st_write(supers,"data/supers.gpkg",delete_dsn = TRUE)
+
+grocers<-pumajoin_all_sf %>%
+  filter(store_group=="Grocer")%>%
+  mutate(auth_date1=year(mdy(auth_date)))
+st_write(grocers,"data/grocers.gpkg",delete_dsn = TRUE)
+
+cents<-pumajoin_all_sf %>%
+  filter(str_detect(tolower(store_name),"99 cent"))%>%
+  mutate(auth_date1=year(mdy(auth_date)))
+st_write(cents,"data/99cents.gpkg",delete_dsn = TRUE)
+
+
+
+hist(supers$auth_date1)
