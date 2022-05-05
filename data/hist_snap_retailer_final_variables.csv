@@ -17,8 +17,8 @@ end_year,Year authorization ended (from date),,,,,,,,,,SG,Small Grocery Store,14
 x,Longitude,,,,,,,,,,SS,Super Store,15,Supermarket,6
 y,Latitude,,,,,,,,,,SM,Supermarket,16,Supermarket,6
 county,U.S. County,,,,,,,,,,WH,Wholesaler,17,Supermarket,6
-cty_fips,U.S. County FIPS code,,,,,,,,,,,,,,
-tract_fips,U.S. Census tract FIPS code,,,,,,,,,,,,,,
+cty_fips,U.S. County FIPS code,,,,,,,,,,FB,Food Buying Co-op,18,Other stores,3
+tract_fips,U.S. Census tract FIPS code,,,,,,,,,,NA,Unknown,19,Other stores,3
 gisjn_tct,NHGIS GISJOIN version of the tract FIPS code,,,,,,,,,,,,,,
 st_fips,U.S. State FIPS code,,,,,,,,,,,,,,
 place_fips,Census Place FIPS code,,,,,,,,,,,,,,

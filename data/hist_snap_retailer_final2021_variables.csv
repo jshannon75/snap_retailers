@@ -17,17 +17,17 @@ end_year,Year authorization ended (from date),,,,,,,,,,SG,Small Grocery Store,14
 x,Longitude,,,,,,,,,,SS,Super Store,15,Supermarket,6
 y,Latitude,,,,,,,,,,SM,Supermarket,16,Supermarket,6
 county,U.S. County,,,,,,,,,,WH,Wholesaler,17,Supermarket,6
-cty_fips,U.S. County FIPS code (2019),,,,,,,,,,,,,,
-tract_fips,U.S. Census tract FIPS code (2019),,,,,,,,,,,,,,
-gisjn_tct,NHGIS GISJOIN version of the tract FIPS code (2019),,,,,,,,,,,,,,
+cty_fips,U.S. County FIPS code,,,,,,,,,,FB,Food Buying Co-op,18,Other store,3
+tract_fips,U.S. Census tract FIPS code,,,,,,,,,,NA,Unknown,19,Other store,3
+gisjn_tct,NHGIS GISJOIN version of the tract FIPS code,,,,,,,,,,,,,,
 st_fips,U.S. State FIPS code,,,,,,,,,,,,,,
-place_fips,Census Place FIPS code (2019),,,,,,,,,,,,,,
-place_name,Census Place name (2019),,,,,,,,,,,,,,
-gisjn_plc,NHGIS GISJOIN version of the place FIPS code (2019),,,,,,,,,,,,,,
+place_fips,Census Place FIPS code,,,,,,,,,,,,,,
+place_name,Census Place name,,,,,,,,,,,,,,
+gisjn_plc,NHGIS GISJOIN version of the place FIPS code,,,,,,,,,,,,,,
 msa_fips,Metropolitan Statistical Area (2019) FIPS code,,,,,,,,,,,,,,
 msa_name,Metropolitan Statistical Area (2019) name,,,,,,,,,,,,,,
 msaclass_name,Metropolitan Statisitical Area name and type (Metro/Micro),,,,,,,,,,,,,,
 msa_class,"Metropolitan Statisitical Area type--M1 is Metro (larger population), M2 is Micro",,,,,,,,,,,,,,
-gisjn_msa,NHGIS GISJOIN version of the MSA FIPS code (2019),,,,,,,,,,,,,,
-puma_fips,U.S. PUMA FIPS code (2019),,,,,,,,,,,,,,
-gisjn_puma,NHGIS GISJOIN version of the PUMA FIPS code (2019),,,,,,,,,,,,,,
+gisjn_msa,NHGIS GISJOIN version of the MSA FIPS code,,,,,,,,,,,,,,
+puma_fips,U.S. PUMA FIPS code,,,,,,,,,,,,,,
+gisjn_puma,NHGIS GISJOIN version of the PUMA FIPS code,,,,,,,,,,,,,,
