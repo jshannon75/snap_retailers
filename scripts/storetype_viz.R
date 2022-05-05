@@ -54,7 +54,7 @@ ggplot(retail_table,aes(x=year,y=count,fill=`Store type`))+
         axis.text.x=element_text(angle=45,hjust=1))+
   xlab("Year")+ylab("Count")+
   labs(caption="Data source: https://github.com/jshannon75/snap_retailers")
-ggsave("graphics/allretailers.png")
+ggsave("graphics/allretailers.jpeg")
 
 #Dollar stores
 dollar_keys<-c("dollar general","dollar tree","family dollar","99 cent")
@@ -81,8 +81,9 @@ ggplot(dollars %>%
   theme_minimal()+
   theme(text=element_text(family="Gill Sans MT"),
         axis.text.x=element_text(angle=45,hjust=1)) +
-  facet_wrap(~`Retail chain`,scales="free")
-ggsave("graphics/dollar_authchg2021.png",width=10,height=5)
+  facet_wrap(~`Retail chain`,scales="free")+
+  labs(caption="Data source: https://github.com/jshannon75/snap_retailers")
+ggsave("graphics/dollar_authchg2021.jpeg",width=10,height=5)
 
 ggplot(dollars %>% 
          filter(end_year>1999) %>% 
@@ -96,8 +97,9 @@ ggplot(dollars %>%
   theme_minimal()+
   theme(text=element_text(family="Gill Sans MT"),
         axis.text.x=element_text(angle=45,hjust=1)) +
-  facet_wrap(~`Retail chain`,scales="free")
-ggsave("graphics/dollar_endchg2021.png",width=10,height=5)
+  facet_wrap(~`Retail chain`,scales="free")+
+  labs(caption="Data source: https://github.com/jshannon75/snap_retailers")
+ggsave("graphics/dollar_endchg2021.jpeg",width=10,height=5)
 
 #Supermarkets and Grocers
 supers<-retail %>%
@@ -112,8 +114,9 @@ ggplot(supers %>% filter(auth_year>1999) %>% mutate(auth_year=as.character(auth_
   xlab("Authorization year")+ylab("Count") +
   ggtitle("New SNAP authorization for supermarkets since 2000") +
   theme_minimal()+
-  theme(text=element_text(family="Gill Sans MT"))
-ggsave("graphics/supermarket_authchg2021.png")
+  theme(text=element_text(family="Gill Sans MT"))+
+  labs(caption="Data source: https://github.com/jshannon75/snap_retailers")
+ggsave("graphics/supermarket_authchg2021.jpeg")
 
 ggplot(supers %>% filter(end_year>1999) %>% mutate(auth_year=as.character(end_year)),
        aes(x=end_year))+
@@ -121,8 +124,9 @@ ggplot(supers %>% filter(end_year>1999) %>% mutate(auth_year=as.character(end_ye
   xlab("Authorization year")+ylab("Count") +
   ggtitle("SNAP de-authorizations for supermarkets since 2000") +
   theme_minimal()+
-  theme(text=element_text(family="Gill Sans MT"))
-ggsave("graphics/supermarket_endchg2021.png")
+  theme(text=element_text(family="Gill Sans MT"))+
+  labs(caption="Data source: https://github.com/jshannon75/snap_retailers")
+ggsave("graphics/supermarket_endchg2021.jpeg")
 
 grocers<-retail %>%
   filter(store_group=="Grocer")%>%
@@ -136,8 +140,9 @@ ggplot(grocers %>% filter(auth_year>1999) %>% mutate(auth_year=as.character(auth
   xlab("Authorization year")+ylab("Count") +
   ggtitle("New SNAP authorization for grocers since 2000") +
   theme_minimal()+
-  theme(text=element_text(family="Gill Sans MT"))
-ggsave("graphics/grocers_authchg2021.png")
+  theme(text=element_text(family="Gill Sans MT"))+
+  labs(caption="Data source: https://github.com/jshannon75/snap_retailers")
+ggsave("graphics/grocers_authchg2021.jpeg")
 
 ggplot(grocers %>% filter(end_year>1999) %>% mutate(auth_year=as.character(end_year)),
        aes(x=end_year))+
@@ -145,8 +150,9 @@ ggplot(grocers %>% filter(end_year>1999) %>% mutate(auth_year=as.character(end_y
   xlab("Authorization year")+ylab("Count") +
   ggtitle("SNAP de-authorizations for grocers since 2000") +
   theme_minimal()+
-  theme(text=element_text(family="Gill Sans MT"))
-ggsave("graphics/grocers_endchg2021.png")
+  theme(text=element_text(family="Gill Sans MT"))+
+  labs(caption="Data source: https://github.com/jshannon75/snap_retailers")
+ggsave("graphics/grocers_endchg2021.jpeg")
 
 #Walmart
 walmart<-retail %>%
@@ -160,8 +166,9 @@ ggplot(walmart %>% filter(auth_year>1999) %>% mutate(auth_year=as.character(auth
   xlab("Authorization year")+ylab("Count") +
   ggtitle("New SNAP authorization for Walmarts since 2000") +
   theme_minimal()+
-  theme(text=element_text(family="Gill Sans MT"))
-ggsave("graphics/walmart_authchg2021.png")
+  theme(text=element_text(family="Gill Sans MT"))+
+  labs(caption="Data source: https://github.com/jshannon75/snap_retailers")
+ggsave("graphics/walmart_authchg2021.jpeg")
 
 ggplot(walmart %>% filter(end_year>1999) %>% mutate(end_year=as.character(end_year)),
        aes(x=end_year))+
@@ -169,8 +176,9 @@ ggplot(walmart %>% filter(end_year>1999) %>% mutate(end_year=as.character(end_ye
   xlab("Authorization year")+ylab("Count") +
   ggtitle("SNAP de-authorizations for Walmarts since 2000") +
   theme_minimal()+
-  theme(text=element_text(family="Gill Sans MT"))
-ggsave("graphics/walmart_endchg2021.png")
+  theme(text=element_text(family="Gill Sans MT"))+
+  labs(caption="Data source: https://github.com/jshannon75/snap_retailers")
+ggsave("graphics/walmart_endchg2021.jpeg")
 
 #Local foods
 local<-retail %>%
@@ -183,8 +191,9 @@ ggplot(local %>% filter(auth_year>1999) %>% mutate(auth_year=as.character(auth_y
   xlab("Authorization year")+ylab("Count") +
   ggtitle("New SNAP authorization for local food retailers since 2000") +
   theme_minimal()+
-  theme(text=element_text(family="Gill Sans MT"))
-ggsave("graphics/local_authchg2021.png")
+  theme(text=element_text(family="Gill Sans MT"))+
+  labs(caption="Data source: https://github.com/jshannon75/snap_retailers")
+ggsave("graphics/local_authchg2021.jpeg")
 
 ggplot(local %>% filter(end_year>1999) %>% mutate(end_year=as.character(end_year)),
        aes(x=end_year))+
@@ -192,5 +201,6 @@ ggplot(local %>% filter(end_year>1999) %>% mutate(end_year=as.character(end_year
   xlab("Authorization year")+ylab("Count") +
   ggtitle("SNAP de-authorizations for local food retailers since 2000") +
   theme_minimal()+
-  theme(text=element_text(family="Gill Sans MT"))
-ggsave("graphics/local_endchg2021.png")
+  theme(text=element_text(family="Gill Sans MT"))+
+  labs(caption="Data source: https://github.com/jshannon75/snap_retailers")
+ggsave("graphics/local_endchg2021.jpeg")
