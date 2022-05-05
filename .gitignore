@@ -2,3 +2,17 @@
 .Rhistory
 .RData
 .Ruserdata
+analysis_NO_UPLOAD/
+snap_retailers.Rproj
+old
+data/old
+packrat/lib*/
+.gitignore
+data/stores_accarea.csv
+data/snapretailers_athens.csv
+analysis/smkt_ratio/
+data/censusareas.gpkg
+data/hist_snap_retailer_final2021.xlsx
+data/hist_snap_retailer_final2021.gpkg
+data/hist_snap_retailer_final.gpkg
+data/Historical SNAP Retailer Locator Data as of 20211231.csv

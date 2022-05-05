@@ -1,11 +1,19 @@
-# National database of SNAP authorized retailers, 2008-2020
-This repository stores data on SNAP authorized retailers nationally from 2008-2020. Data are from the USDA, with records linked across years and all stores geocoded. 
+# Historical database of SNAP authorized retailers
+This repository stores data on SNAP authorized retailers nationally. Data are from the USDA's [SNAP retailer page](https://www.fns.usda.gov/snap/retailer-locator), which currently provides historical data through December 31, 2021. 
 
-A research rationale for these data, details on its construction, and a short descriptive analysis are [available here](https://jshannon75.github.io/snap_retailers/overview_paper).
+This project has added the following attributes to the USDA's data:
+* Broader groupings of store types from USDA's classification for use in analysis
+* Additional variables for years of authorization and the end of authorization in addition to the date
+* Geographic identifiers for the county, tract, PUMA, and place of all listed retailers for use in aggregation and analysis.
 
-An interactive dashboard allowing users to explore this dataset in the 45 largest metropolitan areas is available [as a web application](https://comapuga.shinyapps.io/snapretailexplorer/).
+There are two main files available for download, both in zipped format to meet Github's size restrictions:
 
-Multiple files are available on this site:
+* An [excel version of the data](https://github.com/jshannon75/snap_retailers/raw/master/data/data/hist_snap_retailer_final2021.zip) with tabs for both retailer listings and variable descriptions
+* A [geopackage version of the data](https://github.com/jshannon75/snap_retailers/raw/master/data/data/hist_snap_retailer_final2021_gpkg.zip) that can be used for spatial analysis in GIS or R/Python.
+
+# History of this project
+
+The previous version of this repository linked yearly records of SNAP retailers. USDA now provides a single historical file that includes retailer IDs, and so geocoding and updating these records is now much easier. The previous datasets are still available on this site, covering 2005-2020:
 
 * The main CSV file [with this link](https://github.com/jshannon75/snap_retailers/raw/master/data/snap_retailers_usda.csv). This includes a combined version of the listings provided by USDA with dummy variables for each year and geographic coordinates for all stores.
 
@@ -21,6 +29,7 @@ R scripts showing the data consolidation and editing process are also available 
 
 ## Version history/notes
 
+* 5/5/2022: A new version of the dataset using USDA's historical retailer data was created and added to the repository
 * 11/17/2020: Data for January and June 2020 were added to the dataset
 * 10/28/2019: 2019 Retailers were added to the dataset. These are stores authorized on June 30, 2019. Most were matched to existing records using exact or fuzzy matching. See the 2019 update script for the exact procedure.
 * 10/27/2019: An additional ~10,000 retailers were combined based on fuzzy matching on address. 
