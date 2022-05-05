@@ -8,7 +8,7 @@ This project has added the following attributes to the USDA's data:
 
 There are two main files available for download, both in zipped format to meet Github's size restrictions:
 
-* An [excel version of the data](https://github.com/jshannon75/snap_retailers/raw/master/data/data/hist_snap_retailer_final2021.zip) with tabs for both retailer listings and variable descriptions
+* An [csv version of the data](https://github.com/jshannon75/snap_retailers/raw/master/data/data/hist_snap_retailer_final2021.zip) with separate files of retailer listings and variable descriptions
 * A [geopackage version of the data](https://github.com/jshannon75/snap_retailers/raw/master/data/data/hist_snap_retailer_final2021_gpkg.zip) that can be used for spatial analysis in GIS or R/Python.
 
 # History of this project
