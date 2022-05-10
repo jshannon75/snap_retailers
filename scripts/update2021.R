@@ -60,6 +60,10 @@ cbsa<-st_read("D:/Dropbox/Jschool/GIS data/Census/NHGIS/2020 boundaries/US_cbsa_
          msaclass_name=NAMELSAD,
          msa_class=LSAD,
          gisjn_msa=GISJOIN)
+bg<-st_read("analysis_NO_UPLOAD/data/US_blck_grp_2010.gpkg") %>%
+  select(GEOID10,GISJOIN) %>%
+  rename(fips_bg=GEOID10,
+         gisjn_bg=GISJOIN)
 
 retail2021_new_sf<-retail2021_new %>%
   distinct(record_id,x,y) %>%
@@ -68,6 +72,7 @@ retail2021_new_sf<-retail2021_new %>%
   st_join(tracts,join=st_within) %>%
   st_join(places,join=st_within) %>%
   st_join(cbsa,join=st_within) %>%
+  st_join(bg,join=st_within)
   left_join(retail2021_new)
 
 cats_cw<-snap_retail %>%
