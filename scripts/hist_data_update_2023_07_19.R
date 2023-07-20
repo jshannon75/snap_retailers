@@ -96,7 +96,17 @@ retailer_current_keep<-retailer_current %>%
             by="record_id") %>%
   bind_rows(retail_recent_rev_geo1)
 
+#Correct county name (not sure of source for the error?)
+retailer_current_keep<-read_csv("data/hist_snap_retailer_final2022.csv")%>%
+  mutate(cty_fips=str_pad(as.character(cty_fips),width=5,pad="0")) 
+cty<-tigris::counties() %>% st_set_geometry(NULL) %>%
+  select(GEOID,NAME) %>%
+  rename(cty_fips=GEOID,cty_name=NAME)
+retailer_current_keep<-retailer_current_keep %>%
+  left_join(cty)
+
 write_csv(retailer_current_keep,"data/hist_snap_retailer_final2022.csv")
+
 
 #Create spatial version
 retailer_current_keep<-read_csv("data/hist_snap_retailer_final2022.csv")
