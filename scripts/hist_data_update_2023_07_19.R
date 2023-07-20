@@ -116,7 +116,7 @@ write_csv(dollars,"data/dollars.csv")
 
 grocers<-retailer_current_keep %>%
   filter(store_group=="Grocer")
-write_csv(grocers,"grocers.csv")
+write_csv(grocers,"data/grocers.csv")
 
 localfoods<-retailer_current_keep %>%
   filter(store_group=="Local foods")
