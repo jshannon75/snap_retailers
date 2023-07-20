@@ -1,5 +1,5 @@
 # Historical database of SNAP authorized retailers
-This repository stores data on SNAP authorized retailers nationally. Data are from the USDA's [SNAP retailer page](https://www.fns.usda.gov/snap/retailer-locator), which currently provides historical data through December 31, 2021. 
+This repository stores data on SNAP authorized retailers nationally. Data are from the USDA's [SNAP retailer page](https://www.fns.usda.gov/snap/retailer-locator), which currently provides historical data through December 31, 2022. 
 
 This project has added the following attributes to the USDA's data:
 * Broader groupings of store types from USDA's classification for use in analysis
@@ -8,8 +8,8 @@ This project has added the following attributes to the USDA's data:
 
 There are two main files available for download, both in zipped format to meet Github's size restrictions:
 
-* An [csv version of the data](https://github.com/jshannon75/snap_retailers/raw/master/data/hist_snap_retailer_final2021.zip) with separate files of retailer listings and variable descriptions
-* A [geopackage version of the data](https://github.com/jshannon75/snap_retailers/raw/master/data/hist_snap_retailer_final2021_gpkg.zip) that can be used for spatial analysis in GIS or R/Python.
+* An [csv version of the data](https://github.com/jshannon75/snap_retailers/raw/master/data/hist_snap_retailer_final2022.zip) with separate files of retailer listings and variable descriptions
+* A [geopackage version of the data](https://github.com/jshannon75/snap_retailers/raw/master/data/hist_snap_retailer_final2022_gpkg.zip) that can be used for spatial analysis in GIS or R/Python.
 
 # History of this project
 
@@ -23,12 +23,11 @@ The previous version of this repository linked yearly records of SNAP retailers.
 
 * The data folder of this repo contains the original files provided by USDA, which show store listings for June 30 from 2008-2019. 
 
-* A research project specifically on dollar stores used [this CSV file](https://github.com/jshannon75/snap_retailers/raw/master/data/dollars_all.csv), also available in the data folder. This file includes all SNAP-authorized locations for Dollar General, Dollar Tree, and Family Dollar, along with geographic coordinates, years of operation, and geographic identifiers (county, state, metro area).
-
 R scripts showing the data consolidation and editing process are also available in the home directory of the repo.
 
 ## Version history/notes
 
+* 7/20/2023: The data were updated to include retailer additions and exits from SNAP in 2022.
 * 5/5/2022: A new version of the dataset using USDA's historical retailer data was created and added to the repository
 * 11/17/2020: Data for January and June 2020 were added to the dataset
 * 10/28/2019: 2019 Retailers were added to the dataset. These are stores authorized on June 30, 2019. Most were matched to existing records using exact or fuzzy matching. See the 2019 update script for the exact procedure.
